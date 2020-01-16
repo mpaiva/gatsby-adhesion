@@ -1,0 +1,90 @@
+﻿/* activity custom binding */
+@us-activity-content-color: @gray;
+
+.us-activity-small, .us-activity-large {
+	&::after {
+		position: absolute;
+		content: attr(data-content);
+		font-weight: bold;
+		color: @us-activity-content-color;
+	}
+
+    &.content-nowrap::after {
+        white-space: nowrap;
+    }
+}
+
+.us-overlay {
+    z-index: @zindex-overlay;
+}
+
+.us-activity-small {
+	width: 16px;
+	height: 16px;
+	background: transparent url('../../images/spinner.gif') no-repeat 100% 100%;
+
+	&.content-top-center::after {
+		bottom: 20px;
+		left: -8px;
+	}
+
+	&.content-bottom-center::after {
+		top: 20px;
+		left: -8px;
+	}
+
+	&.content-middle-left::after {
+		right: 20px;
+	}
+
+	&.content-middle-right::after {
+		left: 20px;
+	}
+}
+
+.us-activity-large {
+	width: 32px;
+	height: 32px;
+	background: transparent url('../../images/spinner-large.gif') no-repeat 100% 100%;
+	
+	&::after {
+		position: absolute;
+		content: attr(data-content);
+		font-weight: bold;
+		color: @us-activity-content-color;
+	}
+
+	&.content-top-center::after {
+		bottom: 40px;
+		left: -16px;
+	}
+
+	&.content-bottom-center::after {
+		top: 40px;
+		left: -16px;
+	}
+
+	&.content-middle-left::after {
+		right: 40px;
+	}
+
+	&.content-middle-right::after {
+		left: 40px;
+	}
+    
+	&.content-middle-bottom::after {
+		text-align: center;
+        top: 35px;
+        left: -40px;
+	}
+}
+
+.us-activity-message {
+    text-align: center;
+
+    .us-activity-large,
+    .us-activity-small {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

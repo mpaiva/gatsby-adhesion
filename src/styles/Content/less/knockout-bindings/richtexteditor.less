@@ -1,0 +1,161 @@
+﻿// This is the actual iframe <body> tag
+.mce-content-body {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    .break-word();
+
+    &.readonly {
+        background: @input-bg-disabled;
+    }
+
+    table {
+        .table();
+        .table-bordered();
+
+        td, th {
+            font-size: @font-size-base;
+            font-family: @font-family-base;
+        }
+    }
+}
+
+.mce-tinymce, .mce-window {
+    .mce-title {
+        .modal-title() !important;
+    }
+
+    .mce-container-body * {
+        &:not(.mce-ico) {
+            font-family: @font-family-base !important;
+        }
+    }
+
+    .mce-window-body * {
+        &:not(.mce-ico) {
+            font-family: @font-family-base !important;
+            font-weight: @us-font-weight;
+            font-size: @font-size-base;
+            color: #808080; // TODO: Can be replaced with @text-label-color once the UltiStyleKit feature toggle is removed
+        }
+
+        .mce-listbox {
+            background-color: transparent;
+
+            span {
+                color: @text-color;
+            }
+        }
+    }
+}
+
+.mce-window {
+    border-radius: @border-radius-base;
+
+    input {
+        border-radius: @border-radius-base;
+    }
+}
+
+.mce-toolbar .mce-btn, .mce-primary {
+    &.mce-active {
+        .box-shadow(none);
+        .btn-primary() !important;
+
+        i.mce-ico {
+            text-shadow: none;
+        }
+
+        .mce-ico {
+            color: @btn-primary-color;
+        }
+    }
+
+    &:not(.mce-active) {
+        .btn-default() !important;
+    }
+
+    .btn() !important;
+    .btn-xs() !important;
+    padding: 0 !important;
+}
+
+.mce-window {
+    .mce-widget.mce-btn.mce-last {
+        &:not(.mce-listbox) {
+            &:not(.mce-primary) {
+                .btn-link() !important;
+
+                button {
+                    .btn-link() !important;
+                }
+            }
+        }
+    }
+}
+
+.mce-primary {
+    &:not(.mce-active) {
+        .btn-primary() !important;
+    }
+}
+
+.mce-statusbar {
+    border: none !important;
+
+    .mce-path {
+        display: none !important;
+    }
+}
+
+.mce-toolbar-grp {
+    background-image: none !important;
+    background-color: @input-bg !important;
+}
+
+.mce-tinymce.mce-container {
+    // The tinymce iframe covers up the right border for some reason. Adding a 1px padding to the container solves the issue.
+    padding-right: 1px;
+    background: transparent;
+    border: 1px solid @input-border;
+    border-radius: @input-border-radius;
+}
+
+.form-group.has-error .mce-panel {
+    border-color: @state-danger-text;
+}
+
+.mce-new-ui {
+    .mce-toolbar .mce-btn, .mce-primary {
+        &.mce-active {
+            .btn-primary() !important;
+            .box-shadow(none) !important;
+
+            i.mce-ico {
+                text-shadow: none;
+            }
+
+            .mce-ico {
+                color: @btn-primary-color;
+            }
+        }
+
+        &:not(.mce-active) {
+            .btn-default() !important;
+            .box-shadow(none) !important;
+            border: 1px solid transparent !important;
+        }
+
+        &[aria-label='Cut'], &[aria-label='Copy'], &[aria-label='Paste'], &[aria-label='Find and replace'],
+        &[aria-label='Underline'],
+        &[aria-label='Align left'], &[aria-label='Align center'], &[aria-label='Align right'], &[aria-label='Justify'],
+        &[aria-label='Increase indent'], &[aria-label='Decrease indent'],
+        &[aria-label='Clear formatting'], &[aria-label='Show blocks'],
+        &[aria-label='Special character'], &[aria-label='Table'],
+        &[aria-label='Preview'] {
+            &:extend(.hidden-xs, .hidden-sm);
+        }
+
+        .btn() !important;
+        .btn-xs() !important;
+        padding: 0 !important;
+    }
+}

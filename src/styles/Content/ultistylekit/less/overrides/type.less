@@ -1,0 +1,32 @@
+﻿p {
+    margin-bottom: @us-base-margin-width;
+
+    &:only-child {
+        margin-bottom: 0;
+    }
+}
+
+dl:not(.dl-horizontal) dd + dt {
+  margin-top: @us-base-margin-width;
+}
+dt {
+  color: @us-muted-text-color;
+  font-weight: inherit;
+}
+dd {
+  color: @us-primary-dark-gray;
+}
+
+.text-title {
+  font-family: @headings-font-family;
+}
+.text-large {
+  font-size: 115%;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  &.text-running {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

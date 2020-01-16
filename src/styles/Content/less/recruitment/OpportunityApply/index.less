@@ -1,0 +1,30 @@
+﻿.opportunityapply-controller #OpportunityApplyLinkedInDataConflictedModal {
+    .linkedin-icon {
+        color: @linkedin-color;
+    }
+}
+
+.application-title{
+    > span{
+        font-size: @font-size-base;
+    }
+
+    > h1 {
+        margin: 0 0 16px;
+    }
+}
+
+#AppAvailability {
+    .availability-container {
+        @media screen and (max-width: @screen-xs-max) {
+            display: none;
+        }
+    }
+
+    .availability-container-mobile {
+        @media screen and (min-width: @screen-xs-max) {
+            display: none;
+        }
+    }
+}
+

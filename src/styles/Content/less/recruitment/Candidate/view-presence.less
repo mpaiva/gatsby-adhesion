@@ -1,0 +1,200 @@
+﻿@presence-background-color: #f8f8f8;
+@presence-background-image-lg-height: 310px;
+@presence-background-image-lg-width: 1600px;
+@presence-background-image-md-height: 251px;
+@presence-background-image-md-width: 1200px;
+
+body.candidate-controller {
+    background-color: @presence-background-color;
+}
+
+.candidate-controller .viewpresence-action {
+    background-position: center top;
+    background-image: url("../../../images/CandidatePresenceImage.jpg");
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: @presence-background-image-lg-width @presence-background-image-lg-height;
+
+    @media (max-width: @screen-xs-max) {
+        background-color: #fff; background-image: none;
+    }
+
+    @media (max-width: @screen-md-max) {
+        background-size: @presence-background-image-md-width @presence-background-image-md-height;
+    }
+
+    background-image: url("../../../images/UltimateSoftwareCandidatePresenceImage.jpg");
+
+ .badge-status{
+  padding: 4px 7px;
+  line-height: 1.5;
+  width:115px;
+  word-break:break-word;
+  font-weight:inherit;
+  white-space:inherit;
+}
+
+ .generating-assessment{
+     white-space:normal;
+     padding:6px;
+ }
+
+  .my-presence{
+      display: flex;
+      padding-top:16px;
+      font-size:18px;
+  }
+
+  .reference-icon{
+      vertical-align:top;
+      height:20px;
+  }
+
+      .applied-by{
+        font-style:italic;
+    }
+
+    .address{
+        font-size:12px;
+        line-height:1.7;
+    }
+
+    .nav-tabs > li > a{
+        line-height:1.9;
+    }
+
+    #PageContainer {
+        padding-top: 170px;
+
+        @media (max-width: @screen-xs-max) {
+            padding-top: 0;
+        }
+    }
+
+    #CandidateNameEdit {
+        .avatar {
+
+            // Need to do this in CSS because IE wont automatically keep
+            // SVG aspect ratio
+            @media (max-width: @screen-sm-max) {
+                width: 75px; 
+                height: 75px;
+            }
+
+            @media (min-width: @screen-md-min) {
+                width: 111px; 
+                height: 111px;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+
+    #CandidateApplications{
+        .application-physical-location{
+            margin-top: 10px;
+        }
+        .application-heading{
+            font-weight: bold;
+        }
+        .application-row{
+                padding-bottom: 10px;
+             padding-top: 10px;
+            border-bottom : 1px solid @nav-tabs-border-color;
+        }
+    }
+
+    #References {
+
+        .reference-info {
+            position: relative;
+        }
+
+        .avatar {
+            height: 75px;
+            width: 75px;
+            position: absolute;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .reference-description {
+            margin-left: 100px;
+            min-height: 75px;
+        }
+
+        .recommendation-status {
+            margin: 15px 0;
+            position: relative;
+            border: 1px solid darken(@well-bg, 7%);
+            background-color: #fff;
+            border-radius: @border-radius-large;
+            padding: 10px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0;
+                z-index: 1;
+                top: -10px;
+                left: 20px;
+                border-style: solid;
+                border-width: 0 10px 10px;
+                border-color: #fff transparent;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0;
+                z-index: 0;
+                top: -11px;
+                left: 20px;
+                border-style: solid;
+                border-width: 0 10px 10px;
+                border-color: darken(@well-bg, 7%) transparent;
+            }
+        }
+
+        #ReferenceList {
+            position: relative;
+
+            .steps {
+                margin-left: 110px;
+            }
+
+            .step {
+                position: absolute;
+                max-width: 170px;
+
+                &.step1 {
+                    top: 31px;
+                    right: 150px;
+                }
+
+                &.step2 {
+                    top: 184px;
+                    right: -4px;
+                }
+
+                &.step3 {
+                    top: 335px;
+                    right: 151px;
+                }
+
+                &.step4 {
+                    top: 502px;
+                    right: 80px;
+                }
+            }
+        }
+    }
+}

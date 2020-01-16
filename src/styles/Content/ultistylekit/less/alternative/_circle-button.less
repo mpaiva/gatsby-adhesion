@@ -1,0 +1,50 @@
+// Circle buttons!
+@circle-button-radius: 44px;
+
+.btn-circle {
+  @highlight-color: #FD883E; // FIXME: After variable color merge
+  @focus-border-color: #4C97D9; // FIXME: After variable color merge
+
+  background-color: white;
+  border-color: @btn-default-border;
+  width: @circle-button-radius;
+  height: @circle-button-radius;
+  line-height: @circle-button-radius;
+  border-radius: 100%;
+  color: #808080;
+  padding: 0;
+
+  .fa {
+    font-size: 1.5em;
+    vertical-align: -10%;
+  }
+
+  &:focus, &:active:focus {
+    outline: none;
+  }
+  &:focus:not(:active) {
+    .box-shadow(0 1px 6px 1px lighten(@focus-border-color, 5%));
+  }
+  &:hover, &:focus {
+    background-color: white;
+  }
+  &:active {
+    background-color: #f5f5f5;
+  }
+
+  &.highlight {
+    color: @highlight-color;
+  }
+  &:hover, &:focus, &:active {
+    &.highlight { color: darken(@highlight-color, 10%); }
+  }
+}
+.btn-circle-group {
+  text-align: center;
+  width: 2 * @circle-button-radius;
+  .btn-circle-label {
+    font-size: 86%;
+    display: block;
+    white-space: nowrap;
+  }
+}

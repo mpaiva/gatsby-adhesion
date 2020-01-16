@@ -1,0 +1,57 @@
+﻿// fixes icon rotation in IE9
+.fa-rotate-90,
+.fa-rotate-180,
+.fa-rotate-270 {
+    filter: none !important;
+}
+
+.edit-icon {
+    color: @gray-light;
+    cursor: pointer;
+    font-size: 21px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.featured-icon {
+    color: #fff;
+    padding: 0.4em;
+    border-radius: 50%;
+    background-color: @us-featured-opportunity-label-color;
+    font-size: 0.6em;
+    vertical-align: top;
+}
+
+.success-icon {
+    color: @us-primary-light-green;
+}
+
+.label-with-icon {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+
+    i.fa + span {
+        margin-left: 0.2em;
+        line-height: 1.6em;
+        white-space: nowrap;
+    }
+}
+
+.label-with-icon-group {
+    .label-with-icon {
+        i.fa + span {
+            margin-right: 1.2em;
+        }
+    }
+}
+
+.material-icons {
+    width: 20px;
+    height: 20px;
+    font-size: 18px !important;
+}
+
+

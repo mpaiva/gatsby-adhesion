@@ -1,0 +1,47 @@
+﻿.typeahead-multi-select {
+    .text-input {
+        @media (max-width:@screen-xs-max) {
+            min-width: @large-filter-min-width - @base-spacing*3;
+        }
+
+        @media (min-width:@screen-xs-max) {
+            min-width: @large-filter-min-width;
+        }
+
+        .px-3;
+        .pb-2;
+    }
+
+    .multigroup-item {
+        margin-left: @base-spacing;
+        margin-top: @base-spacing;
+        .mr-0;
+        .mb-0;
+    }
+    /*cant hide it from dom as to prevent not to move fields below so hiding it using css by positioning the dropdown right below to the text-input*/
+    .hide-multigroup-item {
+        margin-top: -(@base-spacing*6);
+    }
+
+    .filter-dropdown {
+        color: @text-color; /*override error highlights*/
+        margin-left: @base-spacing;
+
+        &.filter-large {
+            @media (max-width:@screen-xs-max) {
+                min-width: (@large-filter-min-width - @base-spacing*5) !important; //override
+                width: @large-filter-min-width - @base-spacing*5;
+            }
+
+            @media (min-width:@screen-xs-max) {
+                min-width: (@large-filter-min-width - @base-spacing*2) !important;
+                width: @large-filter-min-width - @base-spacing*2;
+            }
+        }
+
+        &.filter-small {
+            min-width: (@small-filter-min-width - @base-spacing*2) !important; //override
+            width: @small-filter-min-width - @base-spacing*2;
+        }
+    }
+}

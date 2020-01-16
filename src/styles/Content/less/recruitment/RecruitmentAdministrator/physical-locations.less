@@ -1,0 +1,124 @@
+﻿.physicallocation-controller .index-action {
+    #PhysicalLocationPanel {
+        margin-top: 15px;
+    }
+
+    #viewDiv {
+        position: fixed;
+    }
+
+    .selected-address {
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .fa-map-marker {
+        color: @link-color;
+        font-size: 200%;
+        float: left;
+    }
+
+    .edit-button {
+        padding: 0 5px 0;
+    }
+
+    .indent {
+        margin-left: 20px;
+    }
+
+    .form-group.error{
+        margin-bottom: 15px;
+    }
+
+    .address-preview {
+        background-color: @layout-tint-lightest-color;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    
+    .card-container {
+        perspective: 1000px;
+        -ms-transform: perspective(1000px);
+        -ms-transform-style: preserve-3d; 
+    }
+
+    /* flip the pane when hovered */
+    .card-container.flip .back {
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    .card-container.flip .front {
+        transform: rotateY(180deg);
+    }
+
+    .flipper {
+        -ms-transition: 0.4s;
+        -ms-transform-style: preserve-3d;
+        transition: 0.4s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    /* hide back of pane during swap */
+    .front, .back {
+        -ms-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        -ms-transition: 0.4s;
+        -ms-transform-style: preserve-3d;
+        transition:0.4s;
+        transform-style: preserve-3d;
+        width:100%;
+        top: 0;
+        left: 0;
+    }
+
+    /* front pane, placed above back */
+    .front {
+        z-index: @zindex-base;
+        transform: rotateY(0deg);
+    }
+
+    /* back, initially hidden pane */
+    .back {
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(-180deg);
+        transform-style:preserve-3d;
+        position:absolute;
+    }
+
+    .tt-all-results {
+        display: block;
+        border-top:solid @text-muted 1px;
+    }
+
+    .tt-suggestion.tt-cursor a {
+        color: @link-hover-color;
+        text-decoration: @link-hover-decoration;
+    }
+
+    .form-group.coordinate-form-group {
+        margin-bottom: 0;
+
+        .help-block:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    #viewDiv.pointer-cursor {
+        cursor: move;
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+
+    #viewDiv.pointer-cursor:active {
+        cursor: grabbing;
+        cursor: -moz-grabbing;
+        cursor: -webkit-grabbing;
+    }
+}

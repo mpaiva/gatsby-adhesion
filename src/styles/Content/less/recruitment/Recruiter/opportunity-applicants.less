@@ -1,0 +1,297 @@
+﻿.opportunityapplicants-controller {
+    #MainApplicantControls {
+        margin-bottom: 0;
+        /*this overrides USK, but adding on UX request*/
+        .btn-group {
+            box-shadow: none;
+        }
+
+        .applicant-sort-by {
+            .dropdown-toggle {
+                text-align: left;
+                padding: 6px 4px;
+            }
+
+            .applicant-sort-by-text {
+                white-space: initial;
+            }
+        }
+
+        .opp-title{
+            white-space:normal;
+        }
+    }
+
+    .search-bar {
+        margin-bottom: 2 * @padding-base-vertical;
+    }
+
+    .new-applicant {
+        font-weight: bold;
+    }
+
+    .badge-disposition-step {
+        cursor: default;
+    }
+
+    .applicant-address {
+        @media (max-width: @screen-xs-max) {
+            display: none;
+        }
+    }
+
+    .candidate-table-notification {
+        margin-bottom: 0px;
+        margin-top: @line-height-computed;
+    }
+
+    .assessment-notification-icon {
+        &.hidden-md,
+        &.hidden-lg {
+            display: inline-block !important;
+        }
+
+        &.hidden-md {
+            @media (max-width: @screen-md-max) {
+                display: none !important;
+            }
+        }
+
+        &.hidden-lg {
+            @media (min-width: @screen-lg-min) {
+                display: none !important;
+            }
+        }
+    }
+
+    .pending-hire-message {
+        margin-top: @padding-large-vertical;
+    }
+
+    .flex-panel {
+        .flex;
+    }
+
+    .badge-margin {
+        .mt-1;
+    }
+
+    .background-check-status {
+        display: inline-block;
+    }
+
+    .title-evergreen {
+        margin-bottom: 0px;
+    }
+
+    .subtitle-evergreen {
+        margin-bottom: 18px;
+    }
+
+    .org-levels-label, .info-label {
+        padding-top: 2px;
+        padding-left: 8px;
+
+        @media (max-width: @screen-xs) {
+            padding-left: 16px;
+        }
+
+        @media print {
+            padding-left: 16px;
+        }
+    }
+
+    .background-check-acknowledgement {
+        background-color: @layout-tint-lightest-color;
+        padding-top: @us-base-padding-sm-width;
+        padding-bottom: @us-base-padding-sm-width;
+    }
+
+    .emp-referral-name {
+        max-width: 150px;
+        display: inline;
+    }
+
+    .employee-referral {
+        display: inline-block;
+    }
+    // Matching Score Popover
+    .percentage-bar {
+        overflow: hidden;
+        height: 10px;
+        margin-bottom: 5px;
+        background-color: @progress-bg;
+        .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+    }
+
+    .percentage-progress-bar {
+        float: left;
+        width: 0%;
+        height: 10px;
+        background-color: #0F41B8;
+        .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+        .transition(width .6s ease);
+    }
+
+    .candidate-match label {
+        font-size: 12px;
+    }
+
+    .popover-content {
+        min-width: 270px;
+    }
+
+    .overall-score {
+        font-size: 20px;
+        padding-left: 5px;
+    }
+
+    .score {
+        cursor: pointer;
+    }
+
+    .no-info {
+        font-size: 11px;
+        font-style: italic;
+        display: block;
+        padding-bottom: 3px;
+    }
+
+    .matching-score {
+        padding-top: 7px;
+    }
+
+    .matching-score-tooltip {
+        font-family: museo-sans;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 9px 14px;
+    }
+
+    .pending-hire-label {
+        margin-left: 21px;
+    }
+
+    .well-bottom{
+        margin-top:40px;
+    }
+
+    .info-icon{
+        padding-left: 7px;
+    }
+
+    .opportunity-info-label{
+        padding-left: 9px;
+    }
+
+    .hidden-tooltip {
+        float: left;
+        line-height: 20px;
+    }
+
+    .opportunity-title {
+        word-wrap: break-word;
+    }
+
+    .step-wrapper {
+        display: table-row;
+        .step-name{
+            display: table-cell;
+            padding-left: 5px;
+        }
+    }
+}
+
+.background-check-template-items {
+    .mb-2;
+
+    div:last-child {
+        border-bottom: none;
+    }
+}
+
+.background-check-template-item {
+    .px-0;
+    .py-2;
+    border-bottom: 1px solid @table-border-color;
+}
+
+.day-selector {
+    display: block;
+
+    .day-table {
+        td {
+            width: 22px;
+            min-width: 44px;
+            cursor: pointer;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-transform: capitalize;
+
+            &:hover {
+                background: @us-primary-lighter-gray;
+            }
+        }
+
+        td.selected {
+            background: @blue-selected;
+            color: white;
+        }
+
+        td.highlighted {
+            background-color: @us-primary-lighter-gray;
+            color: white;
+        }
+
+        .schedule-popover {
+            font-weight: 300;
+            min-width: 35px;
+            font-size: 13px;
+        }
+    }
+}
+
+.applicant-no-days {
+    text-align: right;
+    width: 90px;
+}
+
+.calendar-trigger, .applicant-days {
+    display: inline-block;
+}
+
+.calendar-trigger {
+    line-height: 0;
+}
+
+.applicant-days {
+    padding-right: 5px;
+    text-align: left;
+}
+
+//Employee Referral Column
+
+.emp-referral-name {
+    max-width: 180px;
+}
+.emp-referral-email{
+    float:left;
+}
+
+.emp-referral-email-address {
+    display: inherit;
+    padding-left: 22px;
+}
+
+.employee-referral-email {
+    margin-top: 5px;
+}
+
+.d-inline {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}

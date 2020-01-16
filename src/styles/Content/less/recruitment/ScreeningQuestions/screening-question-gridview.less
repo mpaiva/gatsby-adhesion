@@ -1,0 +1,34 @@
+﻿
+.screening-question-grid {
+    .search-container {
+        margin-top: 2 * @padding-base-vertical;
+        margin-bottom: 2 * @padding-base-vertical;
+    }  
+
+    .text-question-icon {
+        background: url('/Content/images/pencil-scribble.svg');
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: contain;       
+    }
+
+    .fa-check {
+        color: @us-primary-blue;
+    }
+}
+
+.opportunity-app-questions, .library-question {
+    @media (min-width: @screen-md) {
+        .radio, .checkbox {
+            margin-top: 30px;
+        }
+        .btn-action {
+            margin-top: 25px;
+        }
+    }
+}
+
+.answer-choice-count-text-container{
+    margin-bottom: 15px;
+}

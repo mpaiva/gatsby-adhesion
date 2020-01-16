@@ -1,0 +1,139 @@
+﻿@field-configuration-line-height: 40px;
+@field-configuration-max-feature-width: 250px;
+
+.recruitmentadministrator-controller .settings-action, .candidatesettings-controller .index-action,
+.permissionssettings-controller .index-action, .opportunityinformationsettings-controller .index-action,
+.candidateconsent-controller .index-action {
+
+    .required-asterisk {
+        color: @brand-danger;
+    }
+
+    .not-required-asterisk {
+        color: @gray-lighter;
+        filter: progid:DXImageTransform.Microsoft.DropShadow(Enabled=true,Color=@text-color,OffX=2,OffY=1);
+        text-shadow: 1px 1px 1px @text-color;
+    }
+
+    .feature-configuration-help {
+        .help-group-section {
+            display: inline-block;
+        }
+
+        .help-group-separator {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .help-group {
+            width: 75px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: @padding-small-vertical @padding-small-horizontal;
+        }
+    }
+
+    .field-configuration-list li {
+        margin-bottom: @line-height-computed;
+
+        &:last-child {
+            margin-bottom: @line-height-computed/2;
+        }
+    }
+
+    .field-configuration-template {
+        .feature-name {
+            max-width: @field-configuration-max-feature-width;
+            margin-right: 150px;
+            line-height: @field-configuration-line-height;
+        }
+
+        .feature-visible,
+        .feature-required {
+            .text-muted();
+        }
+
+        .can-configure {
+            .feature-required.not-required {
+                .not-required-asterisk();
+            }
+
+            .feature-required {
+                .required-asterisk();
+            }
+
+            .feature-visible {
+                color: @text-color;
+            }
+        }
+
+        .field-configuration-container {
+            display: inline-block;
+        }
+
+        .feature-row {
+            min-height: @field-configuration-line-height;
+            vertical-align: middle;
+            margin-right: @fa-fw-lg-width; // to align the header due to the ? icon at the top of the section
+            &.configurable {
+                background-color: @panel-bg;
+            }
+        }
+
+        .feature-header-help {
+            float: right;
+            line-height: @line-height-computed;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .feature-header,
+        .feature-icon-cell {
+            float: right;
+            width: 75px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .feature-icon-cell {
+            line-height: @field-configuration-line-height;
+            min-height: @field-configuration-line-height;
+        }
+
+     .non-configurable-fields-padding{
+         padding-top:30px;
+     }
+
+        .non-configurable-fields {
+            position: relative;
+            max-width: @field-configuration-max-feature-width;
+            margin-right: 150px;
+
+            .fa-lock {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .applicant-sources-template {
+        .applicant-source-name {
+            width: 200px;
+            margin-right: 15px;
+            display: inline-block;
+        }
+
+        .archived-list .applicant-source-name {
+            padding-left: @padding-base-horizontal;
+        }
+
+        .popover{
+            max-width:500px;
+        }
+
+        .no-border{
+            border: 0;
+            -webkit-box-shadow:none;
+            box-shadow:none;
+        }
+    }
+}

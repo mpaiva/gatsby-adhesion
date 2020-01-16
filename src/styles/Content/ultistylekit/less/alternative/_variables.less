@@ -1,0 +1,147 @@
+// Color Palette
+// --------------------------------
+
+@primary-highlight-color: #5ca616;
+@primary-highlight-darkest-color: #30570c;
+@primary-highlight-darker-color: #346b00;
+@primary-highlight-lighter-color: #55b000;
+@primary-highlight-contrast-color: #f2ba49;
+
+@secondary-highlight-color: #246baa;
+@secondary-highlight-darkest-color: #0d2840;
+@secondary-highlight-darker-color: #0a4377;
+@secondary-highlight-lighter-color: #4c97d9;
+@secondary-highlight-lightest-color: #b8d7f2;
+@secondary-highlight-contrast-color: #e68d00;
+
+@layout-tint-lightest-color: #f5f5f5;
+@layout-tint-lighter-color: #e3e3e3;
+@layout-tint-darker-color: #666;
+@layout-tint-darkest-color: #404040;
+
+@text-color: #515151;
+@text-disabled-color: #b2b2b2;
+@text-label-color: #808080;
+@text-data-color: #808080;
+@text-placeholder-color: #cccccc;
+@text-shadow-color: rgba(0, 0, 0, 0.4);
+
+@link-color: #0F41B8;
+
+@badge-bg: #d40200;
+@badge-active-color: white;
+@badge-active-bg: @badge-bg;
+
+@state-success-text: #346b00;
+@state-success-bg: #dcebce;
+
+@state-info-text: #246baa;
+@state-info-bg: #d9ecfc;
+@state-info-border: #cae6f2; // Tom H: Default is too saturated. Drop saturation by 25%.
+
+@state-warning-text: #c37900;
+@state-warning-bg: #ffedd1;
+
+@state-danger-text: #d40200;
+@state-danger-bg: #f4e4e4;
+
+@us-navbar-ultipro-link-color:                 @link-color; // used in less/overrides/navbar-ultipro.less
+@us-navbar-ultipro-toggle-hover-bg:            @layout-tint-lightest-color; // used in less/overrides/navbar-ultipro.less
+
+@nav-tabs-active-link-hover-color:             @text-color;
+@nav-pills-active-link-hover-color:             @text-color;
+
+@breadcrumb-color:              @link-color;
+@breadcrumb-active-color:       @text-color;
+
+// Bootstrap overrides
+@brand-primary:         @primary-highlight-color;
+@brand-success:         @secondary-highlight-lighter-color;
+@brand-info:            @secondary-highlight-color;
+@brand-warning:         @state-warning-text;
+@brand-danger:          @badge-bg;
+
+@btn-default-color:     @text-color;
+@btn-default-border:    rgba(0, 0, 0, 0.1);
+@btn-primary-border:    rgba(255, 255, 255, 0.2);
+@btn-success-border:    rgba(255, 255, 255, 0.2);
+@btn-warning-border:    rgba(255, 255, 255, 0.2);
+@btn-danger-border:     rgba(255, 255, 255, 0.2);
+@btn-info-border:       rgba(255, 255, 255, 0.2);
+
+@font-family-sans-serif:  "museo-sans", Arial, Helvetica, sans-serif;
+@font-family-serif:       "museo-slab", Arial, Helvetica, sans-serif;
+
+@font-size-base:          15px;
+
+@font-size-h1:            floor((@font-size-base * 2.4)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.0)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.6)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.2)); // ~18px
+@font-size-h5:            @font-size-base; // ~15px
+@font-size-h6:            ceil((@font-size-base * 0.8)); // ~12px
+
+@headings-font-family:    @font-family-serif;
+
+@border-radius-base:          0;
+@border-radius-small:         0;
+@border-radius-large:         0;
+
+@pager-border-radius:            none;
+
+// color overrides for pagination as per the designers TYC June 15,2015
+@pagination-active-bg: @layout-tint-lighter-color;
+@pagination-active-border: @pagination-border;
+@pagination-active-color: @gray-light;
+
+// DEPRECATION WARNING: These variables will be removed in the next major
+// revision of UltiStyleKit.
+//
+@us-primary-light-gray: @layout-tint-lightest-color;
+@us-primary-gray: #cccccc; // FIXME: Not in color palette
+@us-primary-darker-gray: @layout-tint-darker-color;
+@us-primary-dark-gray: @layout-tint-darkest-color;
+
+@us-brand-green: @primary-highlight-darker-color;
+@us-primary-light-green: @primary-highlight-color;
+
+@us-primary-blue: @secondary-highlight-lighter-color;
+@us-primary-dark-blue: @secondary-highlight-darker-color;
+@us-secondary-light-blue: @secondary-highlight-lightest-color;
+
+@us-navbar-ultipro-secondary-bg: white;
+
+@us-link-color: @link-color;
+
+@us-primary-help-block-color: @text-label-color;
+@us-primary-alert-color: @state-warning-text;
+@us-primary-info-color: @state-info-text;
+@us-primary-error-color: @state-danger-text;
+
+@us-brand-success: @primary-highlight-darker-color;
+@us-brand-info: @secondary-highlight-color;
+@us-brand-warning: @state-warning-text;
+@us-brand-danger: @state-danger-text;
+
+@us-container-background-color: @layout-tint-lightest-color; // used in less/overrides/mixins.less
+@us-regular-body-text-color: @text-color; // used in less/overrides/variables.less
+@us-font-weight: 300; // used in less/overrides/forms.less
+@us-required-field-indicator-color: @state-danger-text;
+
+@us-border-radius-base: @border-radius-base;
+@us-font-size: @font-size-base;
+@us-select-text-color: #999;
+@us-state-danger-bg: @state-danger-bg;
+@us-state-danger-border: @state-danger-border;
+@us-state-danger-text: @state-danger-text;
+@us-state-info-bg: @state-info-bg;
+@us-state-info-border: @state-info-border;
+@us-state-info-text: @state-info-text;
+@us-state-success-bg: @state-success-bg;
+@us-state-success-border: @state-success-border;
+@us-state-success-text: @state-success-text;
+@us-state-warning-bg: @state-warning-bg;
+@us-state-warning-border: @state-warning-border;
+@us-state-warning-text: @state-warning-text;
+//
+// END DEPRECATION WARNING

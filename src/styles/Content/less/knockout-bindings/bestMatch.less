@@ -1,0 +1,83 @@
+﻿@us-great-match-color-1: #F08021;
+@us-great-match-color-2: #f8d44e;
+@us-great-match-color-3: #f5a356;
+
+@us-good-match-color-1: #F3A51D;
+@us-good-match-color-2: #fee073;
+
+@us-somewhat-good-match-color-1: #F3BE18;
+@us-somewhat-good-match-color-2: #f8d44e;
+
+.bestMatch {
+	display: inline-block;
+    line-height: 0;
+    font-size: 1.8em;
+
+	.level {
+		i {
+			font-size: 0.6em;
+			width: 0.6em;
+			display: inline-block;
+		}
+	}
+
+	.icon {
+		position: relative;
+		display: inline-block;
+        vertical-align: middle;
+
+		width: 21px;
+		height: 21px;
+		
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&.great-match {
+		color: @us-great-match-color-1;
+
+		.level {
+			i {
+				&:nth-of-type(1) {
+					color: @us-great-match-color-2;
+				}
+
+				&:nth-of-type(2) {
+					color: @us-great-match-color-3;
+				}
+			}
+		}
+	}
+
+	&.good-match {
+		color: @us-good-match-color-1;
+
+		.level {
+			i {
+				&:nth-of-type(1) {
+					display: none;
+				}
+
+				&:nth-of-type(2) {
+					color: @us-good-match-color-2;
+				}
+			}
+		}
+	}
+
+	&.somewhat-good-match {
+		color: @us-somewhat-good-match-color-1;
+
+		.level {
+			i {
+				color: @us-somewhat-good-match-color-2;
+
+				&:nth-of-type(1), &:nth-of-type(2) {
+					display: none;
+				}
+			}
+		}
+	}
+}

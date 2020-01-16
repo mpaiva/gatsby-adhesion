@@ -1,0 +1,135 @@
+﻿.btn {
+    // Remove margin from USK button which causes alignment issues
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn.btn-default {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        opacity: 1;
+        color: @gray-light;
+        background-color: @gray-lighter;
+    }
+}
+
+.btn.btn-icon{
+    border: none;
+    background-color: transparent;
+    &[disabled] {
+        opacity:.5;
+        background-color: transparent;
+    }
+    > .fa-lg {
+      vertical-align: -5%;
+    }
+    &:active{
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: transparent;
+    }
+}
+
+.btn-basic-icon{
+    color: @gray-light;
+    background-color: #f5f5f5;
+    border-color: #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.btn-dashed {
+    display: block;
+    width: 100%;
+    .hyphens();
+    white-space: normal;
+    background-color: @gray-lighter;
+    border-radius: @border-radius-base;
+    border: 2px dashed darken(@gray-lighter, 7%);
+    .transition(~"background-color 1000ms ease, border-color 1000ms ease");
+
+    &:not(:disabled):hover {
+        border-color: @input-border-focus;
+        background-color: #fff;
+        .transition(~"background-color 500ms ease, border-color 500ms ease");
+    }
+}
+
+.btn-transparent {
+    background-color: transparent;
+}
+
+.btn-table-action {
+    .btn-link();
+    color: @text-muted;
+
+    i.@{fa-css-prefix} {
+        font-size: (4em / 2.8);
+        line-height: (2.8em / 4);
+        vertical-align: -15%;
+    }
+}
+
+// Bootstrap has an outstanding issue when using hidden/visible classes in buttons
+// See: https://github.com/twbs/bootstrap/issues/8869
+.btn.hidden-xs {
+    @media (min-width: @screen-sm-min) {
+        display: inline-block !important;
+    }
+}
+
+.btn {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        pointer-events: all; // Override bootstrap so Title shows up on disabled buttons.. Not sure if this might have other consequences
+    }
+}
+
+.btn-group > .btn {
+    @media (max-width: @screen-xs-min) {
+        padding-left: @btn-padding;
+        padding-right: @btn-padding;
+    }
+}
+
+/*overriding usk to fix button group wrapping issue*/
+.btn.btn-primary,
+.btn.btn-primary.btn-lg,
+.btn.btn-success {
+    @media (max-width: @screen-xs-max) {
+        width: auto;
+        display: inline-block;
+    }
+}
+
+/*overriding usk to fix button group margin issue*/
+.btn.btn-primary + .btn.btn-primary {
+    @media (max-width: @screen-xs-max) {
+        margin-top: 0;
+    }
+}
+
+.btn-spinner{
+    margin-right: @us-base-margin-sm-width
+}
+
+.btn.btn-block {
+    display: block;
+    width: 100%;
+}
+
+
+.btn.btn-flat {
+    box-shadow: none;
+}
+
+.btn-text {
+    .btn-link;
+    padding: 0; 
+    font-weight: lighter;
+    &[disabled] {
+        color: @btn-link-disabled-color;
+    }
+}

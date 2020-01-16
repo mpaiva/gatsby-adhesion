@@ -1,0 +1,179 @@
+﻿@sro-cell-width: 3.93%;
+
+.schedule-ready-only{
+        
+        .schedule-header-line{
+            margin-top:10px;margin-bottom:10px
+        }
+        
+        .schedule-header-title{
+            margin-top:0px;margin-bottom:0px;
+        }
+
+        .schedule-no-padding{
+            padding:0;
+        }
+        
+        .print-line{
+            border: 0;
+            border-top:1px solid #cfcfcf;
+            box-sizing: content-box;
+            height:0;
+        }
+
+        .schedule-row-table{
+            width: 100%;
+            margin-bottom:1.5%
+        }
+
+        .schedule-text-view-interval-xs{
+            text-align:left;
+            font-size:15px;
+        }
+
+        .schedule-td-day{
+            width:6.4%;
+            .schedule-text-view-interval-xs();
+            margin-right: 6px;
+        }
+
+        .schedule-td-day-available {
+            .schedule-td-day();
+            color: @gray-light;
+            font-weight: normal;
+        }
+        
+        .schedule-td-day-unavailable {
+            .schedule-td-day();
+            .text-muted();
+        }
+                       
+        .schedule-text-view-day-xs{
+            .schedule-text-view-interval-xs();
+            color: @gray-light;
+            font-weight: normal;
+        }
+        
+        
+
+        .schedule-row-xs{
+            .row();
+            padding-bottom: 6px;
+        }
+        
+        .schedule-margin-left{
+            margin-left: 2px;
+        }
+        
+        .schedule-margin-center{
+            margin-left: 5px;
+        }
+        
+        .schedule-margin-right{
+            margin-right: 2px;
+        }
+
+        .schedule-td-blank{
+            width:3.9%;
+            border: 1px solid #cfcfcf;
+        }
+
+        .schedule-td-blue{
+            .schedule-td-blank();
+            background: @blue-selected;
+            color:white; 
+            font-size:9px;
+            border: 1px solid #00aaf3;
+            border-left-style: none;
+            border-right-style: none;
+        }
+                
+        .schedule-right-td-blue{
+            .schedule-td-blue();
+            text-align:right
+        }
+                
+        .schedule-td-print-right{
+            width: 90%
+        }
+        
+        .schedule-td-print-cell{
+            width: 100%
+        }
+        
+        .schedule-td-print-cell-content{
+            .schedule-td-print-cell();
+            .schedule-text-view-interval-xs();
+            margin-left: 0px;
+        }
+
+        .schedule-td-print-day-text{
+            .schedule-text-view-day-xs();
+            padding:0;
+            margin:0;
+            vertical-align:text-top;
+            width: 10%;
+        }
+        
+        .schedule-td-print-day-unavailable-text{
+            .schedule-td-print-day-text();
+            .text-muted();
+        }
+
+        .schedule-text-align{
+            text-align:right;
+        }
+
+        .schedule-notes{
+            font-size: 14px;
+        }
+
+        .schedule-note-section{
+            padding-top:7px;
+        }
+        
+        .interval-labels {
+            width:100%;
+            display: block;  
+            margin-left: 0px;
+            font-family: @font-family-serif;
+            tr.no-border {
+              td { border: none;
+                   text-align: center;
+                   color: @blue;
+                   border-bottom: 1px solid @blue;
+                   &:nth-of-type(-n + 2) {
+                    color: @orange;
+                    border-bottom: 1px solid @orange;
+                   }
+                   &:nth-of-type(-n+1) {
+                     width:6.8%;
+                     border:none;
+                     color:none;
+                     }
+              }
+            }
+            td {
+                width: @sro-cell-width;
+                padding: 2px 0;
+                border:0;
+                color: @blue;
+                font-size:12px;
+                &:nth-of-type(-n + 13) {
+                    color: @orange;
+                }
+                &:nth-of-type(-n+1) {
+                  width:5.68%;
+                  border:none;
+                  color:none;
+                }
+            }
+            
+        }
+
+        .text-link{
+            font-size:12px
+            }
+    }
+
+    

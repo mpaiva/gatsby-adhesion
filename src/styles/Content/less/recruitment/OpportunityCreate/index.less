@@ -1,0 +1,411 @@
+﻿.opportunitycreate-controller .index-action {
+    .badge-important {
+        position: absolute;
+        left: 2px;
+        top: -10px;
+        color: @btn-danger-bg;
+        background-color: @btn-danger-color;
+        border: solid 2px @btn-danger-bg;
+        font-weight: bolder;
+        font-size: @font-size-base;
+        z-index: 1;
+        width: 23px;
+        height: 23px;
+    }
+    // checkbox-inline in Bootstrap doesn't look right when they span multiple lines so
+    // just doing it manually
+    .locale-checkbox {
+        margin-right: 2 * @padding-small-horizontal;
+    }
+
+    .well, .well-sm .panel-body {
+        padding-top: 2 * @padding-large-vertical;
+    }
+
+    @media (min-width: @screen-sm) {
+        .point-column {
+            padding-right: 3 * @padding-xs-horizontal;
+        }
+    }
+    /* styles for '...' */
+    .block-with-text {
+        @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+            /* IE10+ specific styles go here */
+            display: list-item;
+        }
+
+        display: inline-block;
+        /* hide text if it more than N lines  */
+        overflow: hidden;
+        /* for set '...' in absolute position */
+        position: relative;
+        /* use this value to count block height */
+        line-height: 1.2em;
+        /* max-height = line-height (1.2) * lines max number (3) */
+        max-height: 3.6em;
+        /* fix problem when last visible word doesn't adjoin right side  */
+        text-align: justify;
+        /* place for '...' */
+        margin-right: -1em;
+        padding-right: 1em;
+    }
+    /* create the ... */
+    .block-with-text:before {
+        /* points in the end */
+        content: '...';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of block */
+        right: 0;
+        bottom: 0;
+    }
+    /* hide ... if we have text, which is less than or equal to max lines */
+    .block-with-text:after {
+        /* points in the end */
+        content: '';
+        /* absolute position */
+        position: absolute;
+        /* set position to right bottom corner of text */
+        right: 0;
+        /* set width and height */
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        /* bg color = bg color under block */
+        background: white;
+    }
+
+    @media @smallest-phone {
+        .truncate-xs {
+            min-width: 185px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    @media @phone {
+        .text-right-mobile {
+            text-align: unset;
+        }
+
+        .input-xs {
+            height: 20px;
+            line-height: 1.5;
+            font-size: 12px;
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+
+        .grid-xs {
+            display: grid;
+        }
+
+        .inline-grid-xs {
+            display: inline-grid
+        }
+
+        .block-xs {
+            display: block;
+        }
+
+        .inline-xs {
+            display: inline;
+        }
+    }
+
+    .opportunity-app-questions {
+        .panel-body-centered {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            @media @phone {
+                display: block;
+            }
+
+            @media @screen-sm {
+                display: block;
+            }
+        }
+
+        .question-panel {
+            position: relative;
+        }
+
+        .app-question-chevron {
+            position: absolute;
+            right: @padding-small-horizontal;
+            top: 3 * @padding-small-vertical;
+            z-index: 10;
+
+            &:focus {
+                outline: none;
+            }
+
+            @media @smallest-phone {
+                right: @padding-small-horizontal;
+                top: 2 * @padding-small-vertical;
+            }
+        }
+
+        .app-question-container {
+            padding-right: 4 * @padding-small-horizontal;
+        }
+
+        .sequence {
+            position: absolute;
+            top: @padding-large-horizontal;
+        }
+
+        .header-buttons {
+            top: 3 * @padding-small-vertical;
+        }
+    }
+
+    .multigroup-item.alert-info {
+        margin-right: @alert-padding;
+    }
+
+    .text-success-light-green {
+        color: @us-primary-light-green;
+        margin-right: @grid-gutter-width / 2;
+    }
+
+    .text-current {
+        color: @blue-darker;
+    }
+
+    .text-pending {
+        color: @gray-light;
+    }
+
+    .approval-tasks-editor {
+        .form-inline > .btn-group,
+        .form-inline > .btn {
+            margin-right: 2 * @padding-small-horizontal;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .justification-comment-editor {
+            .btn {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    .supervisor-visibility {
+        @media (min-width: @screen-sm-min) {
+            .pl-2();
+            .ml-0();
+        }
+    }
+
+
+    .form-group.error a label {
+        color: @us-primary-blue !important;
+    }
+
+    .number-big-size {
+        font-size: 24px;
+    }
+
+    .physical-location-template-item {
+        border-bottom: 1px solid @table-border-color;
+
+        div:last-child {
+            margin-bottom: 5px;
+        }
+    }
+
+    physical-location-template-last-item {
+        border-bottom: none;
+
+        div:last-child {
+            margin-bottom: 5px;
+        }
+    }
+    .visibility-options-align {
+        display: inline-block;
+
+        i {
+            vertical-align: middle;
+        }
+
+        label, a {
+            vertical-align: middle;
+        }
+    }
+
+    .visibility-align-center {
+        .mt-2();
+    }
+
+    .read-only-visibility-options-align {
+        .visibility-options-align();
+        align-items: center;
+    }
+
+    .compensation-visibility-options-align {
+        margin-top: 24px;
+    }
+
+    .compensation-visibility-align {
+        .pl-3();
+    }
+
+    .word-break {
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+    // Everything below applies to the Job Board tab
+    #Publish {
+        .fa-refresh-postings {
+            padding-left: 4px;
+        }
+
+        .linkedin-form-row {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-top: none;
+            background-color: @well-bg;
+        }
+
+        .view-on-linkedin {
+            margin-left: @padding-small-horizontal;
+        }
+
+        .linkedin-collapse-form {
+            padding-top: @table-cell-padding;
+        }
+
+        .fa-linkedin-square {
+            color: @linkedin-color;
+        }
+
+        .jobboard-row td {
+            .transition(background-color 0.5s);
+        }
+
+        .flash-default-jobboard td {
+            background-color: @state-info-bg;
+        }
+
+        .linkedin-expiration-date {
+            .text-muted;
+            .transition(all 1s);
+            padding: @padding-small-vertical @padding-small-horizontal;
+        }
+
+        .linkedin-expiration-date-flash {
+            background-color: @alert-success-bg;
+            color: @alert-success-text;
+            border-radius: @border-radius-base;
+        }
+        // toggleable panel headings
+        .panel-heading {
+            cursor: pointer;
+        }
+
+        .recruiter-job-postings {
+            .job-board-name {
+                color: #676767;
+            }
+
+            .location-language-separator:after {
+                content: "|";
+                padding: 0 7px;
+                color: @gray-light;
+            }
+
+            .new-applicant-count-label {
+                vertical-align: text-top;
+            }
+        }
+
+        .restictions-panel {
+            box-shadow: none;
+            font-size: 14px;
+            cursor: pointer;
+
+            .dropdown-menu {
+                width: 300px;
+                left: -98%;
+                cursor: initial;
+
+                .filter-values-panel {
+                    max-height: 170px;
+                    overflow-y: scroll;
+
+                    span {
+                        display: block;
+                        padding: 5px;
+                    }
+                }
+
+                li {
+                    padding: 7px;
+
+                    span {
+                        display: block;
+                    }
+
+                    .display-text {
+                        font-size: 14px;
+                        margin-bottom: 5px;
+                        color: @gray;
+                    }
+
+                    .category-name {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    /* overriding padding to accommodate the new tab so it fits in one line instead wrap*/
+    #OpportunityContainer {
+        .nav li > a {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+
+    .title-evergreen {
+        margin-bottom: 0px;
+    }
+
+    .subtitle-evergreen {
+        margin-bottom: 18px;
+    }
+
+    .opportunity-title {
+        word-wrap: break-word;
+    }
+
+    .org-levels-label {
+        padding-top: 2px;
+        padding-left: 8px;
+
+        @media (max-width: @screen-xs) {
+            padding-left: 16px;
+        }
+
+        @media print {
+            padding-left: 16px;
+        }
+    }
+
+    .work-experience-years {
+        width: 70%;
+        margin-left: 38px;
+    }
+
+    .lead-translation-language {
+        font-weight: normal
+    }
+}

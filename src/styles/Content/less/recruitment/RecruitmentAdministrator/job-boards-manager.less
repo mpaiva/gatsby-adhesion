@@ -1,0 +1,30 @@
+﻿.recruitmentadministrator-controller .settings-action #JobBoards, .jobboardsettings-controller .index-action {
+    .jobboard-name-label {
+        .control-label-fw;
+
+        a {           
+            .text-truncate();
+            display: inline-block;            
+            vertical-align: middle;            
+            max-width: 100%;
+        }
+    }
+    
+    .jobboard-name-label-isdefault a {
+        max-width: @control-label-fw-width - 80px; // give enough room for default label
+    }
+
+    .jobboard-default-label {
+        margin-left: @padding-small-horizontal;
+    }
+
+    .job-board-configuration-list li {
+        margin-top: @line-height-computed;
+        
+        &:first-child {
+            margin-top: @line-height-computed;
+        }
+        
+      
+    }
+}

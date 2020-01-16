@@ -1,0 +1,209 @@
+﻿address {
+  margin: 0;
+  font-style: normal;
+  margin-top: 1px; // to compensate for alignment issues bc of lower line-height
+  line-height: @line-height-base * 0.85;
+}
+
+dl{
+    margin-top: 0; // Remove browser default
+    margin-bottom: 0;
+}
+
+dt {
+    color: @text-muted;
+    font-weight: normal;
+}
+
+dd {
+    color: @input-color;
+    margin-bottom: (@line-height-computed / 2);
+}
+
+dd:last-child{
+    margin-bottom: 0;
+}
+
+.list-left-aligned-bullets {
+    padding-left: 20px;
+}
+
+.muted {
+    .text-muted;
+}
+
+.em {
+    p {
+        font-style: italic;
+    }
+}
+
+.text-vertical-btn-align {
+    // button padding + line height + border
+    line-height: @padding-base-vertical * 2 + @line-height-computed + 2;
+}
+
+.text-normal {
+    color: @text-color;
+}
+
+.long-text-description {
+    white-space: pre-wrap;
+}
+
+@media (max-width: @screen-xs-max) {
+    .text-left-xs {    
+        text-align: left;
+    }    
+    
+    .text-right-xs {    
+        text-align: right;
+    }
+
+    .text-center-xs {
+        text-align: center;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .text-left-sm {    
+        text-align: left;
+    }
+
+    .text-center-sm {
+        text-align: center;
+    }
+}
+
+.pull-right-sm {
+    @media (min-width: @screen-sm-min) {
+        float: right !important;
+    }
+}
+.pull-right-md {
+    @media (min-width: @screen-md-min) {
+        float: right !important;
+    }
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-wrap {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.text-truncate {
+    .text-overflow();
+}
+
+.primary-header {
+    margin-top: 0;
+}
+
+.paragraph-top {
+    margin-top: (@line-height-computed / 2);
+}
+
+.paragraph-topx2 {
+    margin-top: @line-height-computed;
+}
+
+.paragraph {
+    margin-bottom: (@line-height-computed / 2);
+}
+
+.paragraphx2 {
+    margin-bottom: @line-height-computed;
+}
+
+.vertical-margin-lg {
+    margin-top: (@padding-large-horizontal * 2);
+    margin-bottom: (@padding-large-horizontal * 2);
+}
+
+.paragraph-inline {
+    display: inline-block;
+}
+
+.text-muted-lighter {
+    color: @gray-lighter;
+}
+
+.text-italic {
+    font-style: italic
+}
+
+.text-bold {
+    font-weight: bold
+}
+
+.header-vertical-align {
+    margin-top: @line-height-computed;
+    margin-bottom: (@line-height-computed / 2);
+}
+
+.header-right-aligned-secondary-text {
+    h1 {
+        div {
+            white-space: nowrap;
+        }
+    }
+
+    small {
+        line-height: @font-size-h1;
+        padding-top: 8px;
+        font-size: 45%;
+
+        a {
+            padding-left: 10px;
+        }
+    }
+
+    hr {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    h2 {
+        margin-top: 0px;
+    }
+}
+
+.hr-dashed{
+    border-style: dashed;
+}
+
+hr.no-margin-top{
+    margin-top: 0;
+}
+
+hr.no-margin-bottom{
+    margin-bottom: 0;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
+    font-family: @font-family-sans-serif;
+    font-weight: @us-font-weight !important;
+    font-size: @font-size-base;
+}
+
+h1 .form-group, h2 .form-group, h3 .form-group, h4 .form-group, h5 .form-group, h6 .form-group{
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-base;
+}
+
+h1 .btn, h2 .btn, h3 .btn, h4 .btn, h5 .btn, h6 .btn{
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-base;
+}
+
+.heading-with-subtitle{
+    small{
+        font-weight: @us-font-weight;
+        display: block;
+        margin-top: 6px;
+    }
+}

@@ -1,0 +1,53 @@
+﻿.nested-list-filter {
+    .text-input {
+        .py-2;
+        .px-3;
+    }
+
+    .opts {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+        padding: 0 12px;
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    .collapsible {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+        .header {
+            .flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            padding: 10px 4px;
+
+            .collapsible-indicator {
+                padding: 4px 6px 0 4px;
+            }
+
+            &.align-items {
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+            }
+        }
+
+        .select-list-option {
+            padding: 6px 4px;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    .collapse-indicator {
+        font-weight: bold;
+
+        &.active {
+            color: #246baa;
+        }
+    }
+}

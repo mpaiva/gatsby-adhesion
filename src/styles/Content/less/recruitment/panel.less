@@ -1,0 +1,121 @@
+﻿// Remove spacing between panels in a panel group
+.panel-group {
+    .panel + .panel {
+        margin-top: 0;
+        border-top-width: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .panel:not(:last-child) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.panel-group.panel-group-nested {
+    .panel {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .panel-collapse.collapse.in .panel-body {
+        border-top-color: transparent;
+        border-top-width: 0;
+    }
+}
+
+.panel {
+    .panel-buttons,
+    .panel-icon,
+    .panel-subtitle,
+    .panel-title {
+        height: @panel-title-height;
+        line-height: @panel-title-height;
+    }
+
+    .panel-title {
+        .text-truncate;
+    }
+
+    .panel-subtitle {
+        .muted;
+        .text-italic;
+        .small;
+    }
+
+    .panel-buttons,
+    .panel-icon {
+        margin-left: @padding-base-horizontal;
+    }
+
+    .panel-buttons,
+    .panel-icon {
+        .pull-right;
+    }
+
+    .panel-divider {
+        height: 2em;
+        position: relative;
+        text-align: center;
+        margin-bottom: @line-height-computed / 2;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            border-top: 1px solid @hr-border;
+        }
+
+        i {
+            font-size: 2em;
+            color: @hr-border;
+            background: @panel-bg;
+            padding: 0 10px;
+            position: relative;
+        }
+    }
+
+    @media (max-width: @screen-xs-max) {
+        .panel-subtitle {
+            display: none;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .panel-subtitle {
+            display: inline;
+            margin-left: @padding-base-horizontal;
+        }
+    }
+}
+
+.panel-flat {
+    .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
+    background-color: @panel-default-heading-bg;
+    border: none;
+    .box-shadow(none);
+
+    .panel-heading {
+        border: none;
+    }
+}
+
+.panel-transparent {
+    .panel-variant(@panel-default-border; @panel-default-text; transparent; @panel-default-border);
+    .panel-heading {
+        border-bottom: 0;
+    }
+}
+
+.panel-has-error {
+    .panel-variant(#d40200; @panel-default-text; transparent; @panel-default-border);
+
+    .panel-heading {
+        border-bottom: 0;
+    }
+}

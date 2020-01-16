@@ -1,0 +1,128 @@
+﻿.table {
+    .table-actions {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .squish-column {
+        width: 1px;
+    }
+
+    .gdpr-squish-column {
+        width: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+        padding-top:10px;
+        text-align:center;
+        font-size: 13px !important
+    }
+
+    &.table-row-bordered {
+        border: 1px solid @table-border-color;
+    }
+
+    > thead > tr > th {
+        vertical-align: top;
+        border-top: 1px solid #ddd !important;
+        border-bottom: 0px !important;
+    }
+
+    th {
+        word-break: normal;
+
+        .text-muted {
+            font-weight: normal;
+        }
+
+        .fa-sort {
+            margin-left: 3px;
+        }
+
+        .fa-sort-asc {
+            position: relative;
+            top: 2px;
+            margin-left: 3px;
+        }
+
+        .fa-sort-desc {
+            position: relative;
+            top: -2px;
+            margin-left: 3px;
+        }
+        /*bootstrap visible-xs and hidden-xs has !important
+        which takes higher precedence if !important not used below*/
+        @media(min-width: @screen-xs-max) {
+            .hidden-xs {
+                display: inline !important;
+            }
+        }
+
+        @media(max-width: @screen-xs-max) {
+            .visible-xs {
+                display: inline !important;
+            }
+        }
+    }
+
+    td {
+        .popover {
+            margin-top: -24px;
+        }
+
+        .title-label {
+            display: inline-block;
+            font-style: italic;
+            color: @text-muted;
+        }
+    }
+
+    .column-sort-title {
+        .flex;
+
+        cursor: pointer;
+
+        .fa-sort {
+            margin-top: 4px;
+        }
+    }
+}
+
+// Bootstrap 3.0 doesn't include info but later versions do
+.table-row-variant(info; @state-info-bg);
+
+
+// Candidate indicator
+.table .candidate-indicator,
+.table .candidate-indicator-table-head,
+.table .posting-indicator,
+.table .posting-indicator-table-head {
+    width: 5px;    
+    padding: 0;
+    margin: 0;
+}
+
+.posting-indicator {
+    &.posting-indicator-error {
+        background-color: @brand-danger !important;
+    }
+
+    &.posting-indicator-no-error{
+        background-color: transparent !important;
+    }
+}
+
+
+.selectable-row {
+    &.selected td,
+    &.selected:hover td {
+        background-color: @tr-selected-background-color;
+    }
+
+    td {
+        cursor: pointer;
+
+        > * {
+            cursor: initial;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+﻿.twitter-typeahead {
+    display: block !important;
+}
+
+.twitter-typeahead .tt-input,
+.twitter-typeahead .tt-hint {
+	margin-bottom: 0;
+}
+
+.tt-input {
+    background-color: @input-bg !important;
+}
+
+.tt-input[disabled] {
+    background-color: @input-bg-disabled !important;
+}
+
+.tt-hint {
+    display: none !important;
+}
+.tt-dropdown-menu {
+    font-size: @font-size-base;
+    line-height: @line-height-computed;
+    color: @dropdown-link-color;
+	min-width: 160px;
+	margin-top: 2px;
+	padding: 5px 0;
+	background-color: @dropdown-bg;
+	border: 1px solid @dropdown-fallback-border;
+	border: 1px solid @dropdown-border;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	background-clip: padding-box;
+ 
+}
+.tt-suggestion {
+    cursor: pointer;
+}
+.tt-suggestion,
+.tt-empty {
+	display: block;
+	padding: 3px 20px;
+}
+.tt-suggestion.tt-cursor,
+.tt-empty {
+	color: @dropdown-link-hover-color;
+	background-color: @dropdown-link-hover-bg;
+}
+.tt-suggestion.tt-cursor a {
+	color: @dropdown-link-hover-color;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+
+.typeahead-group {
+    position: relative;
+
+    .typeahead-addon {
+        position: absolute;
+        top: 0;
+        padding: @padding-base-vertical @padding-base-horizontal;
+    }
+}
+
+.typeahead-group-left {
+    .tt-input {
+        padding-left: (@padding-base-horizontal * 2) + 14;
+    }
+    .typeahead-addon {
+        left: 0px;
+    }
+}
+
+.typeahead-group-right {
+    .tt-input {
+        padding-right: (@padding-base-horizontal * 2) + 14;
+    }
+    .typeahead-addon {
+        right: 0px;
+    }
+}
+
+.typeahead-addon.typeahead-button-addon-right {
+    padding: 0;
+
+    .btn {
+        box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-width: 0 0 0 1px;
+        margin: 1px;
+    }
+}
+
+/* don't wrap typeahead suggestions, allow them to go as long as possible */
+/* to avoid issues with long suggestions at the bottom of pages */
+.tt-dropdown-menu .tt-suggestion p {
+    .text-overflow() !important;
+}
+
+
+/* typeahead as list-view */
+.typeahead-list-view .tt-dropdown-menu {
+    position: relative !important;
+    overflow-y: auto;
+    border: 0px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.typeahead-list-view-container,
+.typeahead-list-view {
+    width: 100%;
+    min-width: @small-filter-min-width;
+}
+
+.typeahead-list-view .tt-dropdown-menu,
+.typeahead-list-view [class^="tt-dataset-"],
+.typeahead-list-view .tt-suggestions {
+    max-height: @line-height-computed * 7;
+}
+
+.typeahead-list-view-dropdown-label {
+    padding-right: 30px;
+}

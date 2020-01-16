@@ -1,0 +1,194 @@
+@presence-background-color: #f8f8f8;
+@presence-background-image-lg-height: 310px;
+@presence-background-image-lg-width: 1600px;
+@presence-background-image-md-height: 251px;
+@presence-background-image-md-width: 1200px;
+
+body.candidateoffer-controller {
+  background-color: @presence-background-color;
+}
+
+.candidateoffer-controller.candidate-layout .index-action {
+  background-position: center top;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-size: @presence-background-image-lg-width @presence-background-image-lg-height;
+
+  @media (max-width: @screen-xs-max) {
+    background-color: white; background-image: none;
+  }
+
+  @media (max-width: @screen-md-max) {
+    background-size: @presence-background-image-md-width @presence-background-image-md-height;
+  }
+  
+  @media (max-width: @screen-sm-min) {
+    #CandidateOffer {
+      padding-top: 36px;
+    }
+  }
+
+  background-image: url("../../../images/UltimateSoftwareCandidatePresenceImage.jpg");
+  
+  .presence-link {
+    .link {
+      display: flex;
+      align-items: flex-end;
+      color: #004990;
+    }
+    
+    .link:hover {
+      text-decoration: none;
+    }
+    
+    .fa-angle-left {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .back-to-presence {
+      vertical-align: bottom;
+    }  
+    
+    .back-to-presence:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  @media (min-width: @screen-sm-min) {
+    .brand div:first-child {
+      padding-left: @online-offers-spacing-small;
+    }  
+  }
+  
+  .offer-letter-well {
+    @media (min-width: @screen-sm-min) {
+      .well;
+      .well-light;
+      padding: @online-offers-spacing-big !important;
+    }
+    
+    .offer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+      .letter-heading {
+        display: flex;
+        align-items: center;
+      }
+      
+    .offer-letter {
+      padding-top: @online-offers-spacing-big;
+      padding-bottom: @online-offers-spacing-big;
+    }
+  }
+    
+    .bold {
+      font-weight: bold;
+    }
+    
+    @media (max-width: @screen-sm-min) {
+    .offer-letter-well {
+      padding-top: 20px;
+    }
+  }
+  
+  .congratulations {
+    .logo {
+      max-height: 200px !important;
+      max-width: 100% !important;
+    }
+    text-align: center !important;
+  }
+
+  #PageContainer {
+    padding-top: 170px;
+
+    @media (max-width: @screen-xs-max) {
+      padding-top: 0;
+      .thin-line {
+        padding-top: 0px;
+      }
+    }
+  }
+  
+  .section-line {
+    border-bottom: 1px solid #cfcfcf;
+  }
+  
+  .offer-header {
+    vertical-align: bottom;
+  }
+
+  .add-signature-button {
+    background-color: white;
+    color: @link-color;
+    border-color: @link-color;
+    box-shadow: none;
+    padding-left: @online-offers-signature-button-spacing-lr;
+    padding-right: @online-offers-signature-button-spacing-lr;
+    padding-top: @online-offers-signature-button-spacing-tb;
+    padding-bottom: @online-offers-signature-button-spacing-tb;
+  }
+  
+  .accept-section {
+    margin-top: @online-offers-spacing-big;
+  }
+  
+  .consent-info {
+    margin-bottom: @online-offers-spacing-small;
+    
+    .consent-title {
+      font-family: museo-slab;
+    }
+    
+    .our-records {
+      font-weight: 500;
+      color: @text-label-color;
+    }
+  }
+  
+  .sign-button {
+    margin-top: @online-offers-spacing-big;
+  }
+
+  .revoked-text {
+    margin-top: @online-offers-spacing-big;
+  }
+  
+  .acknowledge-button {
+    margin-top: @online-offers-spacing-small;
+  }
+  
+  .sign-offer-help {
+    font-size: @font-size-small;
+    color: @text-label-color;
+  }
+  
+  .download-pdf-button {
+    font-size: @font-size-small;
+    font-weight: 300;
+  }
+
+  .fetching-pdf {
+    .progress-spinner-overlay {
+      margin-top: -360px
+    }  
+  }
+  
+  .offer-contact-info {
+    .questions {
+      font-weight: bold; 
+    }
+  }
+}
+
+.candidateoffer-controller .error-action {
+  
+  .error-page {
+    vertical-align: center;
+  }
+
+}

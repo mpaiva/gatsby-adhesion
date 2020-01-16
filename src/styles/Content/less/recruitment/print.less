@@ -1,0 +1,79 @@
+@media print {
+
+    /* GENERAL STYLES */
+    
+    a[href]:after {
+        // undo default behavior to print link href value
+        content: none !important;
+    }
+
+    blockquote {
+        border: none !important;
+        page-break-inside: avoid;
+  }
+
+    // page
+    #PageContainer {
+        // removes top margin from printed page
+        margin-top: 0px !important;
+    }
+
+    // wells
+    .well {
+        // forces background color to print
+        background-color: @well-bg !important;
+    }
+
+    .text-muted {
+        color: @text-muted !important;
+    }
+
+    // progress
+    .progress-header {
+        display: inline-block !important;
+
+        .progress {
+            display: inline-block !important;
+            background-color: @progress-bg !important;
+        }
+    }
+
+    // Bar of progress
+    .progress-bar {
+        float: left !important;
+        color: @progress-bar-color !important;
+        background-color: @progress-bar-bg !important;
+    }
+
+    .qualification-box {
+        // ensures background color is printed on printed page
+        background-color: #d9edf7 !important;
+    }
+
+    .background-check-completion {
+        text-align: right !important;
+    }
+
+    .print-hyperlink-value
+    {
+        a[href]:after {
+            content: " (" attr(href) ")" !important;
+        }
+    }
+
+    body {
+        zoom: 0.85;
+    }
+}
+
+/* IE 10+ SPECIFIC */
+
+@media print and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    // page
+    #PageContainer {
+        // removes top margin from printed page
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+}

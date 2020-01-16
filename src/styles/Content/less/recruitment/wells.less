@@ -1,0 +1,44 @@
+﻿.well-light {
+  background-color: #fff;
+}
+
+.well-title {
+    text-align: center;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 0.5em;    
+    color: @gray-light;
+}
+
+.well-badge {
+    margin-top: 28px;
+    padding-top: 28px;
+    position: relative;
+
+    .circle-badge {
+        margin: 0 -2em;
+        width: 56px;
+        height: 56px;
+        border-radius: 28px;
+        .box-shadow(inset 0 1px 1px rgba(0,0,0,.05)); // from .well class
+        background-color: @well-bg;
+        position: absolute;
+        top: -26px;
+        left: 50%;
+
+        [class^="fa-"], [class*="fa-"], [class^="icon-"], [class*="icon-"] {
+            width: 48px;
+            text-align: center;
+            font-size: 37px;
+            position: relative;
+            left: 4px;
+            top: 10px;
+            color: darken(@well-bg, 7%); // from .well class
+        }
+    }
+}
+
+.well {
+    .list-unstyled:last-child{
+        margin-bottom: 0;
+    }
+}

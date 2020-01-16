@@ -1,0 +1,364 @@
+﻿@notification-templates-tags-width: 225px;
+
+.recruitmentadministrator-controller .settings-action {
+
+    h2 {
+        display: inline;
+    }
+
+    .settings-section-header {
+        &:not(.first-settings-section-header) {
+            padding-top: @line-height-computed/2;
+            border-top: 1px solid @hr-border;
+            margin-top: @line-height-computed/2;
+        }
+
+        .btn {
+            margin-bottom: @line-height-computed/2;
+            display: inline;
+        }
+
+        .activity-indicator {
+            padding-top: @padding-base-vertical;
+            padding-right: @padding-base-horizontal;
+        }
+
+        margin-bottom: @line-height-computed/2;
+    }
+
+    .required-option-box {
+        min-height: 170px !important;
+    }
+
+    .nounderline {
+        text-decoration: none !important
+    }
+
+    .feature-child {
+        margin-left: @padding-large-horizontal;
+    }
+
+}
+
+.recruitmentadministrator-controller .settings-action, .jobboardsettings-controller .index-action, .integrationssettingscontroller .index-action {
+    .collapse-indent {
+        margin-left: 14px;
+    }
+}
+
+#LinkedInSettings {
+    .nondestructivehidden {
+        overflow: hidden;
+        transform: scaleY(0);
+        opacity: 0;
+        transform-origin: top;
+        height: 0;
+    }
+
+    .spinner-message {
+        width: 500px;
+        background: #F7F7F7;
+        text-align: center;
+        padding: 60px 30px;
+    }
+}
+
+#AssessSystemsSettings {
+    .accessibility-label {
+        display: none;
+    }
+}
+
+#PermissionSettings {
+    .us-permission-settings-category-header {
+        margin-bottom: 30px;
+        font-style: italic;
+        color: @text-muted;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .control-label {
+        display: block;
+        vertical-align: middle;
+    }
+
+    .permission-settings-category-header {
+        color: #515151;
+        font-family: "museo sans";
+        font-size: 25px;
+        line-height: 34px;
+    }
+
+    .permissions-container {
+        border: #e6e6e6 1px solid;
+    }
+
+    .permission-container .permission-container {
+        .permission-item {
+            border-bottom: #e6e6e6 1px solid;
+        }
+
+
+        &:last-child {
+            .permission-item {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .permission-container .new-form-group {
+        margin-bottom: 0px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .permission-container .permission-link {
+        border-bottom: #e6e6e6 1px solid;
+    }
+
+    .label {
+        color: #515151;
+    }
+
+    .switch-group {
+        float: right;
+        border-radius: 20px;
+        height: 1px;
+        margin-top: 20px;
+    }
+
+    .recruiting-process-link {
+        @media (min-width: @screen-xs-min) {
+            float: right;
+        }
+
+        @media (max-width: @screen-xs-max) {
+            float: left;
+        }
+    }
+
+    .sub-heading {
+        font-family: "museo-sans", "MuseoSans-500";
+    }
+
+    .margin-top {
+        padding-top: 30px;
+    }
+
+    .margin-bottom {
+        padding-top: 20px;
+    }
+
+    .show-error {
+        display: inline-block;
+        color: #A94442;
+        float: left;
+        height: 21px;
+        color: #A94442;
+        font-family: "museo-sans", "MuseoSans-300";
+        font-size: 15px;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+}
+
+
+.usersandloginssettings-controller .index-action {
+    #UsersAndLogins {
+        h2 {
+            float: left;
+        }
+
+        .settings-section-header .btn {
+            margin-top: @line-height-computed;
+        }
+
+        .activity-indicator {
+            margin-top: @line-height-computed;
+            padding-top: @padding-base-vertical;
+            padding-right: @padding-base-horizontal;
+        }
+    }
+}
+
+.templatessettings-controller .index-action{
+#TemplateSettings {
+    .settings-section-subheader {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .template-assignment-form {
+        label{
+            vertical-align: middle;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+    }
+
+    #AssignNotificationTemplateSettings {
+        hr {
+            border: 0;
+            border-top: 1px solid @hr-border-lighter;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+  }
+}
+
+.candidatesettings-controller .index-action{
+    #CandidateBasicInformation {
+        .default-consent-message {
+            overflow-y: auto;
+
+            @media (min-width: @screen-xs-min) {
+                height: 388px;
+            }
+
+            @media (max-width: @screen-xs-max) {
+                max-height:150px;
+            }
+        }
+    }
+}
+
+.opportunityinformationsettings-controller {
+    .panel {
+        min-height: 175px;
+    }
+
+    .link-expiration-days {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.offersettings-controller {
+    .link-expiration-days {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .offer-expiration-limit {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .offer-expiration-maximum {
+        font-size: @smaller-settings-font-size;
+    }
+}
+
+.recruitingprocessessettings-controller .index-action {
+    .settings-section-header {
+        margin-bottom: @line-height-computed;
+    }
+
+    #DispositioningReasons {
+        .archive-reason-label {
+            .muted;
+            .text-vertical-btn-align;
+            margin-left: @icon-collapse-indicator-width;
+        }
+
+        .tool-tip {
+            font-size: medium;
+            vertical-align: baseline;
+        }
+    }
+
+    #ClosingReasons {
+        .archive-reason-label {
+            .muted;
+            .text-vertical-btn-align;
+            margin-left: @icon-collapse-indicator-width;
+        }
+
+        .tool-tip {
+            font-size: medium;
+            vertical-align: baseline;
+        }
+    }
+}
+
+#USFederalContractor {
+    .legal-entity-heading {
+        background-color: #f5f5f5;
+        border: 1px solid;
+        border-color: #e3e3e3;
+        margin-bottom: 15px;
+        border-radius: 3px;
+        margin-left: 1px;
+        padding: 4px;
+    }
+
+    .control-label-fww {
+        width: 180px;
+    }
+
+    .popover {
+        max-width: 270px;
+        max-height: 220px;
+    }
+}
+
+#EmailTemplates {
+    .merge-tags-fields-container {
+        position: relative;
+    }
+
+    .merge-tags-container {
+        display: none;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .fields-container {
+            margin-right: @notification-templates-tags-width + @grid-gutter-width/2;
+        }
+
+        .merge-tags-container {
+            .well;
+            .well-sm;
+            .well-light;
+            .transition(border-color ease-in-out .15s);
+            margin-bottom: 0;
+            border-style: dashed;
+            display: block;
+            overflow-y: auto;
+            position: absolute;
+            top: @line-height-computed + @padding-small-vertical; // align it with the field so start at the label bottom
+            bottom: 0;
+            right: 0;
+            width: @notification-templates-tags-width;
+            text-align: left;
+
+            &.merge-tags-container-active {
+                border-color: @input-border-focus;
+            }
+
+            .add-merge-header,
+            .merge-tag-link {
+                .transition(color ease-in-out .15s);
+            }
+        }
+    }
+}
+
+.help-text {
+    font-style: italic;
+    margin-top: @line-height-computed/8;
+}
+
+jobsearchagent-controller .index-action {
+    .address-align {
+        margin-bottom: @line-height-computed/8;
+    }
+}
+

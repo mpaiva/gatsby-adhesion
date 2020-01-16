@@ -1,0 +1,45 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+
+label {
+  color: @text-label-color;
+}
+
+// The lighter label requires a still-lighter placeholder
+.form-control {
+  &::-webkit-input-placeholder {
+    color: @text-placeholder-color;
+  }
+
+  &:-moz-placeholder {
+    color: @text-placeholder-color;
+  }
+
+  &::-moz-placeholder {
+    color: @text-placeholder-color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @text-placeholder-color;
+  }
+}
+
+// Required form controls
+//
+
+.required > .control-label:before {
+  content: '*';
+  color: @state-danger-text;
+  font-size: 1.4em;
+  line-height: .5em;
+  vertical-align: middle;
+  position: relative;
+  top: 0.1em;
+  margin-right: 4px;
+}

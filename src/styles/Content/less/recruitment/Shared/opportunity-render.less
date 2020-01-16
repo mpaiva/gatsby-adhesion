@@ -1,0 +1,159 @@
+﻿.opportunity-render-view {
+    .opportunity {
+        .hyphens();
+    }    
+    
+    // remove this after UserDefinedLocations toggle is removed
+    .opportunity-sidebar-border {
+        border-right: 1px solid @hr-border;
+
+        > li {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid @hr-border;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+    .opportunity-sidebar {
+        > li {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid @hr-border;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        address{
+            margin-bottom: 10px;
+        }
+    }
+
+    .header {
+        position: relative;
+        
+        .status-label {
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+            font-size: 42%;
+            text-align: center;
+            border: 1px solid;
+            border-color: @us-closed-opportunity-label-color;
+            background-color: @us-closed-opportunity-label-color;
+
+            &.featured-label {
+                border-color: @us-featured-opportunity-label-color;
+                background-color: @us-featured-opportunity-label-color;
+            }
+        }
+
+        // remove this after UserDefinedLocations toggle is removed
+        .status-label-old {
+            text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+            position: absolute;
+            font-size: 85%;
+            text-align: center;
+            top: 24px;
+            left: -20px;
+            border-radius: 0;
+            width: 80px;
+            border: 1px solid;
+            border-color: @us-closed-opportunity-label-color;
+            background-color: @us-closed-opportunity-label-color;
+            .rotate(-90deg);
+
+            &.featured-label {
+                border-color: @us-featured-opportunity-label-color;
+                background-color: @us-featured-opportunity-label-color;
+            }
+
+            &.closed-label {
+                border-color: @us-closed-opportunity-label-color;
+                background-color: @us-closed-opportunity-label-color;
+            }
+
+            &.active-label {
+                border-color: @us-active-opportunity-label-color;
+                background-color: @us-active-opportunity-label-color;
+            }
+
+            &.draft-label {
+                border-color: @us-draft-opportunity-label-color;
+                background-color: @us-draft-opportunity-label-color;
+            }
+
+            &.pending-approval-label {
+                border-color: @us-pending-opportunity-label-color;
+                background-color: @us-pending-opportunity-label-color;
+            }
+
+            &.rejected-draft-label {
+                border-color: @us-rejected-opportunity-label-color;
+                background-color: @us-rejected-opportunity-label-color;
+            }
+        }
+    }
+
+    .title-row {
+        margin-bottom: 15px;
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            &.opportunity-with-status-header {
+                padding-left: @line-height-computed;
+            }
+        }
+    }
+
+    .job-scale- {
+        &bar {
+            width: 80px;
+            margin-left: 1em;
+        }
+        &1 /*none*/ {
+            width: 0;
+        }
+
+        &2 /*beginner*/ {
+            width: 25%;
+        }
+
+        &3 /*intermediate*/ {
+            width: 50%;
+        }
+
+        &4 /*advanced*/ {
+            width: 75%;
+        }
+
+        &5 /*expert*/ {
+            width: 100%;
+        }
+    }
+
+    .opportunity-description {
+        // For rich text formatting
+        img {
+            .img-responsive();
+        }
+
+        table {
+            .table();
+            .table-bordered();
+        }
+    }
+}

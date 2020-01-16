@@ -1,0 +1,158 @@
+﻿
+#BrandingManagerLogoColorChecklist ul {
+    position: relative;
+    padding-left: 40px;
+
+    i {
+        position: absolute;
+        left: 0;
+    }    
+    
+    h3
+    {
+        display:inline
+    }
+}
+
+.recruitmentadministrator-controller .settings-action , .brandingsettings-controller .index-action, .jobboardsettings-controller .index-action{
+  
+    .no-margin {
+        margin: 0px;
+    }
+
+    .div-select-container {
+        width: 100%;
+        padding-right: @fa-fw-lg-width + (@fa-fw-lg-width / 4);
+        display: inline-block;
+        margin-right: (@fa-fw-lg-width + (@fa-fw-lg-width / 4)) * -1;
+
+        select {
+            width: 100%;
+        }
+    }
+
+    .branding-manager {
+
+        .translation-icon-container {
+            line-height: @input-height-base;
+        }
+
+        img.large-header-logo {
+            width: auto;
+            height: auto;
+            max-width: 300px;
+            max-height: 65px;
+        }
+
+        img.small-header-logo {
+            width: auto;
+            height: auto;
+            max-width: @small-header-logo-max-width;
+            max-height: 25px;
+        }
+
+        .logo-box {
+            background: url("/Content/images/branding-manager/checkerpattern.png") repeat;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid @table-border-color;
+            border-radius: @border-radius-base;
+            overflow-x: hidden;
+        }
+
+        fieldset.top-line-title {
+            border: 1px solid LightGrey !important;
+            border-left: 0px !important;
+            border-right: 0px !important;
+            border-bottom: 0px !important;
+            -webkit-box-shadow: 0px 0px 0px 0px #000;
+            box-shadow: 0px 0px 0px 0px #000;
+            margin-top: (@font-size-base - 1);
+
+            legend {
+                text-align: center !important;
+                width: auto;
+                border-bottom: none;
+                padding: 0 10px;
+                font-size: @font-size-base;
+                margin-bottom: 0px !important;
+            }
+        }
+
+        .desktop-preview
+        {
+            max-width: 600px;
+        }
+
+        .mobile-preview
+        {
+            max-width: 202px;
+        }
+
+        .offer-letter-preview
+        {
+            max-width: 327px;
+        }
+
+        .branding-preview {
+            .bordered-container();
+            margin-bottom: 10px;
+            border-radius: @border-radius-base;
+            padding:0px;
+            max-height: 451px;
+
+            .branding-preview-header {
+                border-radius: @border-radius-base @border-radius-base 0 0;
+                border-width: @navbar-border-width;
+                border-style: solid;
+                border-color: @navbar-default-border;
+                height: @navbar-height;
+                background-color: @navbar-default-bg;
+                line-height: @navbar-height;
+
+                .large-header-logo {
+                    margin-left: 15px;
+                }
+
+                .nav-preview {
+                    height: @navbar-height;
+                    position: relative;
+                    float: right;
+
+                    div {
+                        background-color: @navbar-default-color;
+                        border-radius: @border-radius-base;
+                        position: absolute;
+                        margin: (@navbar-border-size/-2) 0px;
+                        top: 50%;
+                        right: 15px;
+                        height: @navbar-border-size;
+                        width: 90px;
+
+                        &:last-child {
+                            width: 50px;
+                            right: 120px;
+                        }
+                    }
+                }
+            }
+            .branding-preview-header-mobile {
+                height:   (@navbar-height/2) + 10px;
+                line-height: @navbar-height/3;  
+                padding: 10px;                                      
+            }
+
+            .preview-img {
+                width: 100%;
+            }
+        }
+
+        .branding-preview-footer {
+            border-top: 1px solid @us-container-border-color;
+            border-radius: 0 0 @border-radius-base @border-radius-base;
+            padding: @grid-gutter-width/2 0;
+            text-align: center;
+            background-color: @us-footer-background-color;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ultistylekit",
+  "authors": [
+    "Gunther Taborga <gunther_taborga@ultimatesoftware.com>",
+    "Jeff Tucker <Jeff_Tucker@ultimatesoftware.com>"
+  ],
+  "description": "A lightweight set of overrides to Bootstrap 3 for a consistent UltiPro v14 look and feel.",
+  "main": [
+    "less/ultistylekit.less"
+  ],
+  "keywords": [
+    "LESS",
+    "overrides",
+    "CSS",
+    "images"
+  ],
+  "license": "none",
+  "homepage": "http://devgit:7990/projects/USK/repos/ultistylekit/browse",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0"
+  }
+}

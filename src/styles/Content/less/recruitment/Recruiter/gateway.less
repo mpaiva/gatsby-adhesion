@@ -1,0 +1,102 @@
+﻿@recruiter-gateway-search-background-height:    165px;
+
+.dashboard-controller {
+    .CandidateSearchBarBackground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: @recruiter-gateway-search-background-height + @navbar-small-height + @navbar-inverse-border-bottom-width + @navbar-inverse-border-top-width - 1;
+        background-color: #949aa3;
+    }
+}
+//SearchTips//
+.gateway-dropdown {
+    @media (min-width:220px) and (max-width:460px) {
+        width: 116.5% !important;
+    }
+    @media (min-width:@screen-xs-min) and (max-width:@screen-xs-max) {
+        width: 111% !important;
+    }
+
+    @media (min-width:@screen-sm-min) and (max-width:@screen-sm-max) {
+        width: 111% !important;
+    }
+
+    @media (min-width:@screen-md-min) and (max-width:@screen-md-max) {
+        width: 106.5% !important;
+    }
+
+    @media (min-width:@screen-lg-min) {
+        width: 106.5% !important;
+    }
+
+    margin-top: 35px !important;
+}
+
+.dashboard-controller .index-action {
+    #PageContainer {
+        h3[id*="CandidatesHiredBySourceTitle"] {
+            display: inline-block;
+            margin-top: 0;
+        }
+
+        .data-visualization {
+            padding-left:15px;
+        }
+
+        div[id*='HiredCandidatesBySource'] {
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #fff;
+            border-width: 1px;
+            border-color: #ddd;
+            border-radius: 4px 4px 0 0;
+            border-style: solid;
+            box-shadow: none;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        div[id*='TimeFilter'] span {
+            font-weight: bold;
+        }
+
+        div[id*='TimeFilter'] a {
+            padding:5px;
+        }
+
+        div[id*='HiredCandidatesBySource'] span, div[id*='HiredCandidatesBySource'] text, div[id*='HiredCandidatesBySource'] div {
+            cursor: default;
+        }
+
+        div[id*='CandidateSearchBar'] {
+            height: @recruiter-gateway-search-background-height;
+            margin-top: -21px;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            .SearchForCandidates{
+                color: #fff;
+                font-size: 20px;
+                vertical-align:top;
+                line-height: 31px;
+            }
+        }
+
+        .GatewayPeopleSearch {
+            height: 165px;
+            background-image: url(/Content/Images/GatewayPeopleSearchHeader.png);
+            padding-top: 60px;
+            padding-left: 16px;
+            background-repeat: no-repeat;
+        }
+
+        .candidatesHiredToDate{
+            margin-right:2px;
+            font-weight:bold;
+            font-size: 18px;
+            padding-right:2px;
+        }
+    }
+}

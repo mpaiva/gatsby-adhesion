@@ -1,0 +1,105 @@
+﻿.reset-box-sizing {
+  &,
+  *,
+  *:before,
+  *:after {
+    .box-sizing(content-box);
+  }
+}
+
+.transform-origin(@x, @y) {
+    -webkit-transform-origin: @x @y;
+    -moz-transform-origin: @x @y;
+    -ms-transform-origin: @x @y;
+    -o-transform-origin: @x @y;
+    transform-origin: @x @y;
+}
+
+// Used to create a consistent bordered container in the application
+.bordered-container(@borderColor: @us-container-border-color) {
+    border: 1px solid @borderColor;
+}
+
+// Used to create a consistent bordered container with a consistent background color in the application
+.bordered-colored-container (@padding: 0, @backgroundColor: @us-container-background-color) {
+    background-color: @backgroundColor;
+    padding: @padding;
+    .bordered-container(darken(@backgroundColor, 7%));
+}
+
+// Used to mixin FontAwesome icons
+.fa-icon(@icon) {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+        content: @icon;
+    }
+}
+
+.fadeBGTo(@colorFrom, @colorTo) {
+    @-webkit-keyframes fadeBGTo {
+        0% { background-color: @colorFrom; }
+        100% { background-color: @colorTo; }
+    }
+
+    @-moz-keyframes fadeBGTo { 
+        0% { background-color: @colorFrom; }
+        100% { background-color: @colorTo; }
+    }
+
+    @-o-keyframes fadeBGTo {
+       0% { background-color: @colorFrom; }
+       100% { background-color: @colorTo; }
+    }
+
+    @keyframes fadeBGTo {
+       0% { background-color: @colorFrom; }
+       100% { background-color: @colorTo; }
+    }
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+.break-word {
+    word-wrap: break-word;
+
+    // Non standard for webkit
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+.image-icon() {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.flex {
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+}

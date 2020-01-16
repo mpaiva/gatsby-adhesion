@@ -1,0 +1,47 @@
+@media screen and (max-width: @screen-xs-max) {
+    ﻿.modal-dialog {
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    .modal-lg {
+        .modal-dialog {
+            width: 85%;
+            max-width: 1400px;
+        }
+    }
+}
+
+#timeout-modal-container {
+    z-index: 9999;
+}
+
+.modal-footer {
+    .btn {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    @media (max-width: 767px) {
+        .btn.btn-primary, .btn.btn-primary.btn-lg, .btn.btn-success, .btn.btn-default {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+.modal-header-primary {
+    background-color: @us-primary-blue;
+    border-bottom: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    h3 {
+        color: white;
+    }
+}
+
+.modal-dark-backdrop + .modal-backdrop.fade.in {
+    opacity: 0.75;
+}

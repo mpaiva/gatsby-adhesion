@@ -1,0 +1,198 @@
+﻿.references-controller .viewreferences-action {
+    .roundabout-holder {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+        height: 360px;
+    }
+
+    .roundabout-moveable-item {
+        height: auto;
+        width: 23em;
+        cursor: pointer;
+        border: 1px solid @gray-light;
+        margin: 0;
+        line-height: 1em;
+
+        .card-section {
+            .edit-button {
+                margin-right: .5em;
+                width: 36px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .toggle-in-focus {
+                display: none;
+            }
+        }
+
+        address {
+            line-height: 1.4em;
+
+            .title {
+                .hyphens();
+            }
+        }
+    }
+
+    .roundabout-in-focus {
+        cursor: auto;
+
+        .text {
+            display: block;
+        }
+        
+        .text-limit {
+            display: block;
+            text-align: right;
+            width: 100%;
+            margin-bottom: .5em;
+        }
+        
+        .card-section {
+            .toggle-in-focus {
+                display: inherit;
+            }
+        
+            .edit-button {
+                display: inline-block;
+                vertical-align: top;
+            }
+        
+            address {
+                display: inline-block;
+                margin-left: 0;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .you-pointer {
+        width: 60px;
+        margin: 0 auto;
+        text-align: center;
+        color: @gray-light;
+        position: relative;
+
+        .view-presence-icon {
+            font-size: 3.429em;
+            padding: 0px;
+            margin: 0px;
+            text-decoration: none;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-color: @us-container-background-color;
+            border-top-color: #fff;
+            border-style: solid;
+            border-width: 30px;
+            position: absolute;
+            z-index: @zindex-base;
+        }
+    }
+
+    .card-container {
+        background-color: @us-container-background-color;
+        border-radius: @border-radius-base;
+        position: relative;
+        height: 500px;
+        .hyphens();
+    }
+
+    li.card {
+        min-height: 6.5em;
+        overflow-y: hidden;
+        width: 23.5em;
+        padding: 1em 1em;
+        background-color: #fff;
+        border: 1px solid lighten(@gray-light, 10%);
+        border-radius: 5px;
+        .box-shadow(0 2px 4px rgba(0,0,0,.25));
+
+        &.editing-request {
+            height: 14em;
+        }
+
+        &.place-holder {
+            color: lighten(@gray-light, 10%);
+            border-style: dashed;
+        }
+
+        i {
+            color: lighten(@gray-light, 10%);
+        }
+
+        .recommendation-box {
+            padding-top: 1em;
+            margin-top: 0.6em;
+            border-top: 1px solid darken(@gray-lighter, 10%);
+
+            .recommendation-buttons {
+                width: 100%;
+            }
+
+            .recommendation-text {
+                line-height: 1.4em;
+
+                a {
+                    cursor: pointer;
+                }
+            }
+
+            .recommendation-details {
+                width: 100%;
+            }
+
+            textarea {
+                .box-sizing(border-box);
+                width: 100%;
+            }
+        }
+
+        .recommend-button {
+            display: inline-block;
+        }
+
+        .pending-recommendation-text {
+            padding-top: .5em;
+            padding-right: 7px;
+            display: inline-block;
+            font-style: italic;
+        }
+
+        .relationship-icon,
+        .card-relationship-icon {
+            font-size: 2em; // needs to remain em because carousel cards in background scale with em
+        }
+
+        .card-edit-reference {
+            position: absolute;
+            left: 10px;
+            top: 15px;           
+        }
+
+        .card-relationship-icon {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+        }
+
+        .name-address-section {
+            padding-left: 44px;
+            padding-right: 30px;
+            box-sizing: border-box;
+        }
+
+        .toggle-in-focus {
+            opacity: 1.0;
+        }
+
+        .sending-icon i {
+            margin-right: 5px;
+        }
+    }
+}

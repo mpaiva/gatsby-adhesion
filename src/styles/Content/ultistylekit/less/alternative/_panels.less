@@ -1,0 +1,33 @@
+.panel-title, .modal-title {
+  font-family: @font-family-serif;
+  font-weight: 300;
+}
+.panel-title {
+  font-size: 18px;
+}
+.modal-title {
+  font-size: 24px;
+}
+.panel-heading, .modal-header {
+  border-bottom-width: 3px;
+}
+.modal-content {
+  .box-shadow(0px 1px 5px rgba(0, 0, 0, 0.3));
+}
+
+// Default panel will have a white head now. Add a new panel variant to restore
+// gray head if needed.
+.panel-default .panel-heading {
+  background-color: white;
+  border-color: white;
+  color: @text-color;
+}
+
+.panel-dark {
+  border-color: @panel-default-border;
+
+  .panel-heading {
+    background-color: @panel-default-heading-bg;
+    border-color: @panel-default-border;
+  }
+}

@@ -1,0 +1,61 @@
+﻿.search-container {
+    margin-top: 2 * @padding-base-vertical;
+    margin-bottom: 2 * @padding-base-vertical;
+
+    .search-bar {
+        margin-bottom: 2 * @padding-base-vertical;
+    }
+}
+
+table.recruiter-opportunities {
+    .requisition-number-separator:after {
+        content: "|";
+        padding: 0 7px;
+        color: @gray-light;
+    }
+
+    .evergreen-container:before {
+        content: "(";
+        padding: 0 2px;
+        color: @gray-light;
+    }
+
+    .evergreen-container:after {
+        content: ")";
+        padding: 0 2px;
+        color: @gray-light;
+    }
+
+    .applicant-count-label {
+        font-size: @font-size-h4;
+        vertical-align: text-top;
+
+        @media (max-width: @screen-xs-max) {
+            display: block;
+        }
+    }
+
+    .job-board-labels {
+        .small;
+        line-height: 0;
+        padding-top: 5px;
+        white-space: nowrap;
+    }
+
+    .label-thirdparty {
+        .label-variant(@thirdparty-color);
+    }
+
+    .label-linkedin {
+        .label-variant(@linkedin-color);
+    }
+
+    .label-notposted {
+        .label-variant(@notposted-color);
+    }
+
+    .recruiter-approver-column {
+        min-width: 150px;
+    }
+}
+      

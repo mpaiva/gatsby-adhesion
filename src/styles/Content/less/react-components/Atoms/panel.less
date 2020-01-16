@@ -1,0 +1,50 @@
+﻿.round {
+    border-radius: 4px;
+}
+.panel-grey {
+    box-shadow: 0px 0px 0px #f5f5f5; // one extra to cover the border
+    background: #f5f5f5;
+    -webkit-transition: background linear 0.20s, box-shadow linear 0.20s !important;
+    -moz-transition: background linear 0.20s, box-shadow linear 0.20s !important;
+    -o-transition: background linear 0.20s, box-shadow linear 0.20s !important;
+    -ms-transition: background linear 0.20s, box-shadow linear 0.20s !important;
+    transition: background linear 0.20s, box-shadow linear 0.20s !important;
+}
+
+
+.expandable-panel {
+    opacity: 1;
+    background: #f5f5f5;
+    max-height: 300px;
+    overflow: hidden;
+    padding: 8px 19px 0px 19px;
+    -webkit-transition: all .15s ease .10s;
+    -moz-transition: all .15s ease .10s;
+    -o-transition: all .15s ease .10s;
+    -ms-transition: all .15s ease .10s;
+    transition: all .15s ease .10s;
+
+    &.hidden-panel {
+        opacity: 0;
+        clear: both;
+        max-height: 0;
+        padding: 0 19px;
+        overflow: hidden;
+        background: #ffffff;
+        -webkit-transition: all .15s ease .15s;
+        -moz-transition: all .15s ease .15s;
+        -o-transition: all .15s ease .15s;
+        -ms-transition: all .15s ease .15s;
+        transition: all .15s ease .15s;
+    }
+}
+
+.no-outline{
+    outline: 0;
+}
+
+.panel-content-well {
+    display: inline-block;
+    min-height: 20px;
+    border-radius: 3px;
+}

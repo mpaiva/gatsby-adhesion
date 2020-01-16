@@ -1,0 +1,437 @@
+﻿﻿@primary-highlight-darkest-color: #437910; @primary-highlight-lighter-color: #68bd19; .fix-ios-positioning {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+
+.navbar-us {
+    .logo {
+        padding-left: 4px;
+    }
+
+    .small-logo {
+        max-width: 75px;
+        max-height: 25px;
+    }
+
+    .large-logo {
+        max-width: 300px;
+        max-height: 65px;
+    }
+
+    .navbar-collapse {
+        max-height: 550px;
+    }
+
+    .navbar-collapse.in .navbar-nav > li,
+    .navbar-collapse.collapsing .navbar-nav > li {
+        text-align: right;
+    }
+
+    .navbar-nav > li > a {
+        border: 0;
+    }
+
+    .navbar-toggle {
+        border: 0;
+
+        .icon-bar {
+            width: 18px;
+            height: 4px;
+        }
+    }
+
+    .navbar-offcanvas-toggle {
+        float: left;
+    }
+}
+
+.navbar-candidate {
+    .nav > li > a {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @media (min-width: @screen-sm-min) AND (max-width: @screen-md-max) {
+        .nav > li > a {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+
+    .navbar-nav > li > .dropdown-menu {
+        margin-top: @navbar-border-size;
+    }
+
+    .navbar-default();
+    .navbar-us();
+    border-width: @navbar-border-width;
+
+    .navbar-brand {
+        padding: 0;
+    }
+    // Make navbar smaller when in xs, sm, or md displays
+    @media (max-width: @screen-lg-min) {
+        min-height: @navbar-small-height;
+
+        .navbar-brand {
+            height: auto;
+        }
+
+        .nav > li > a {
+            padding-top: @navbar-small-padding-vertical;
+            padding-bottom: @navbar-small-padding-vertical;
+        }
+    }
+}
+
+.navbar-recruiter {
+    .navbar-inverse();
+    .navbar-us();
+    border-top-color: @ultipro-brand-primary-color;
+    border-top-width: @navbar-inverse-border-top-width;
+    border-bottom-width: @navbar-inverse-border-bottom-width;
+    min-height: 54px !important;
+    min-height: @navbar-small-height;
+    background-image: url('/Content/images/UltiProLogo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 10px;
+    background-size: 180px 34px;
+
+    > .container-fluid {
+        .us-navbar-toggle-icon {
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("/Content/images/PersonIcon.svg");
+        }
+
+        .us-navbar-simple-badge-icon {
+            position: absolute;
+            left: 24px;
+            top: 6px;
+            color: @brand-danger !important;
+        }
+
+        .navbar-brand {
+            padding: 12px 0 0 0;
+            margin: 0;
+            height: auto;
+
+            .brand-text {
+                font-family: @font-family-sans-serif; /* Should go back to @headings-font-family once UltiStyleKit updates it to sans font */
+                font-weight: @headings-font-weight;
+                color: @us-primary-dark-gray;
+                vertical-align: middle;
+                font-size: 19px;
+            }
+        }
+
+        .nav > li > a {
+            padding-top: @navbar-small-padding-vertical;
+            padding-bottom: @navbar-small-padding-vertical;
+        }
+
+        .navbar-toggle {
+            // From mixins: .navbar-vertical-align
+            margin-top: ((@navbar-small-height - 34px) / 2);
+            margin-bottom: ((@navbar-small-height - 34px) / 2);
+
+            @media (max-width: @screen-sm-max) {
+                margin: 0;
+                padding: 15px 15px 10px;
+            }
+
+            color: @us-primary-blue;
+        }
+
+        .navbar-offcanvas-toggle {
+            @media (max-width: @screen-sm-max) {
+                padding: 17px 15px;
+            }
+
+            @media (max-width: @screen-sm) {
+                padding: 17px 15px;
+                display: inherit;
+            }
+        }
+    }
+}
+
+#RecruitmentNavColumn {
+    background-color: @ultipro-brand-primary-color;
+    padding: 50px 0px 9999px 0px;
+    margin-bottom: -9999px;
+    margin-top: -40px; /* -50 on onboarding */
+    min-height: 100%;
+    max-width: 200px;
+}
+
+#RecruitmentNavList {
+    .nav-header,
+    .btn-add-pool,
+    .recruiter-dashboard-nav-list > li > a,
+    .pool-name-link {
+        margin: 0;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    .menu-group {
+        padding: 5px 0;
+        position: relative;
+
+        &:hover:not(.active) {
+            background-color: @ultipro-brand-lighter-color;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .active {
+        background-color: @ultipro-brand-darker-color;
+    }
+
+    .recruiter-dashboard-nav-list {
+        a.nav-header, > li > a, > li > button {
+            padding-left: 46px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .btn-link {
+            width: 100%;
+            text-align: left;
+        }
+
+        > li {
+            &:hover:not(.active) {
+                background-color: @ultipro-brand-lighter-color;
+            }
+
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .my-pending-approvals {
+        a {
+            padding-left: 56px !important;
+        }
+    }
+
+    > li {
+        margin-bottom: 20px;
+    }
+
+    li {
+        position: relative;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        a {
+            .us-truncate();
+            white-space: normal;
+            width: 100%;
+        }
+    }
+
+    .nav-header {
+        font-weight: bold;
+        padding: @us-base-md-width 0px @us-base-md-width 46px;
+        margin: 0px;
+    }
+
+    .nav-icon {
+        display: inline-block;
+        left: 10px;
+        top: 6px;
+        text-align: center;
+        padding: 8px;
+        position: absolute;
+
+        .fa {
+            color: white;
+        }
+
+        i {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: white;
+            font-size: 1.4em;
+        }
+
+        .us-people-icon {
+            background-image: url('/Content/images/NewHire_icon.svg');
+        }
+
+        .us-dashboard-icon {
+            background-image: url('/Content/images/DashboardIcon.svg');
+        }
+
+        .us-opportunity-icon {
+            background-image: url('/Content/images/OpportunityIcon.svg');
+        }
+
+        .us-settings-icon {
+            background-image: url('/Content/images/SettingsIcon.svg');
+        }
+    }
+}
+
+.nav-tabs > li {
+    > a {
+        background-color: @nav-tabs-link-bg;
+        border-color: @nav-tabs-border-color;
+
+        &:hover {
+            background-color: @nav-tabs-link-hover-bg;
+        }
+
+        &,
+        &:hover,
+        &:focus {
+            color: @text-color;
+        }
+    }
+}
+
+.row-offcanvas {
+    position: relative;
+}
+
+.row-offcanvas-overlay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    z-index: @zindex-overlay;
+    cursor: pointer;
+}
+
+@media screen and (max-width: @screen-xs-max) {
+    html.row-offcanvas-active {
+        .row-offcanvas-overlay {
+            display: block;
+        }
+
+        .row-offcanvas-left .sidebar-offcanvas {
+            left: 0;
+        }
+
+        .row-offcanvas-left {
+            left: 0;
+        }
+
+        #RecruitmentNavColumn {
+            left: 0;
+            float: left;
+            position: relative;
+            max-width: 200px;
+            .box-shadow(1px 0px 4px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        #PageContainer {
+            position: absolute;
+        }
+    }
+
+    .sidebar-offcanvas {
+        .transition(left 0.25s ease-out);
+        position: absolute;
+        top: 0;
+        width: 75%;
+        left: -75%;
+        z-index: @zindex-overlay + 1;
+    }
+}
+
+.nav-tabs > li {
+    > a {
+        background-color: @nav-tabs-link-bg;
+        border-color: @nav-tabs-border-color;
+
+        &:hover {
+            background-color: @nav-tabs-link-hover-bg;
+        }
+
+        &,
+        &:hover,
+        &:focus {
+            color: @text-color;
+        }
+    }
+}
+
+.row-offcanvas {
+    position: relative;
+}
+
+.row-offcanvas-overlay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    z-index: @zindex-overlay;
+    cursor: pointer;
+}
+
+@media screen and (max-width: @screen-sm-min) {
+    html.row-offcanvas-active {
+        .row-offcanvas-overlay {
+            display: block;
+        }
+
+        .row-offcanvas-left .sidebar-offcanvas {
+            left: 0;
+        }
+
+        .row-offcanvas-left {
+            left: 0;
+        }
+
+        #RecruitmentNavColumn {
+            left: 0;
+            float: left;
+            position: relative;
+            max-width: 200px;
+            .box-shadow(1px 0px 4px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        #PageContainer {
+            position: absolute;
+        }
+    }
+
+    .sidebar-offcanvas {
+        .transition(left 0.25s ease-out);
+        position: absolute;
+        top: 0;
+        width: 75%; /* 18 columns */
+        left: -75%;
+        z-index: @zindex-overlay + 1;
+    }
+}

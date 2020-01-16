@@ -1,0 +1,54 @@
+﻿.offer-signature-container {
+  .offer-signature {
+    //text-align: left;
+    font-family: @font-family-sans-serif;
+    color: @online-offers-signature-box-color;
+    font-size: @online-offers-standard-font-size
+  }
+
+  .offer-signature-label-box {
+    border: 1px solid @online-offers-signature-box-color;
+    background-color: white;
+    width: 140px;
+    height: 18px;
+    margin-left: 10px;
+    margin-top: -9px;
+    position: absolute;
+    font-size: @online-offers-xs-font-size;
+    padding-left: 8px;
+  }
+
+  .offer-signature-box {
+    border: 1px solid #a8a8a8;
+    display: table;
+    min-width: 250px;
+    height: 80px;
+    border-radius: 3px;
+
+    .signature-content-signature {
+      font-size: @online-offers-bigger-font-size;
+      font-weight: bold;
+      color: @online-offers-signature-color;
+    }
+
+    .signature-content-line {
+      border-top: 1.5px solid @online-offers-signature-box-color;
+    }
+
+    .signature-content-date {
+      font-size: @online-offers-xs-font-size;
+      text-align: left;
+      position: absolute
+    }
+
+
+    .acknowledgement-content-name {
+      color: @online-offers-signature-color;
+      font-weight: normal
+    }
+
+    .acknowledgement-content-date {
+      font-size: @online-offers-xs-font-size;
+    }
+  }
+}

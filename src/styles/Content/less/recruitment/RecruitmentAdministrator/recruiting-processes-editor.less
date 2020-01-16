@@ -1,0 +1,260 @@
+﻿.recruitmentadministrator-controller .settings-action .recruiting-processes-editor, .recruitingprocessessettings-controller .index-action {
+
+    @recruiting-process-name-area-width: 235px;
+    @recruiting-process-index-width: 60px;
+    @recruiting-process-element-margin-right: 15px;
+    @recruiting-process-input-width: 260px;
+
+    .delay-input-field-length {
+        width: 75px;
+        display: inline;
+    }
+
+    .label-small {
+        justify-content: flex-end;
+        display: flex;
+        font-size: 12px;
+
+        @media (max-width: @screen-xs-max) {
+            justify-content: unset;
+        }
+    }
+
+    .hiring-manager-view-label {
+        max-width: 206px;
+    }
+
+    .hiring-manager-disposition-label {
+        min-width: 206px;
+    }
+
+    .process-headers {
+        font-size: 17px;
+        font-weight: 500;
+        color: #666;
+        padding-bottom: 8px;
+
+        .process-headers-muted {
+            color: #808080;
+            font-size: 86%;
+        }
+    }
+
+    .process-step-index {
+        font-size: @font-size-h1;
+        line-height: @input-height-base;
+        vertical-align: middle;
+        display: inline-block;
+        text-align: right;
+        width: @recruiting-process-index-width;
+
+        @media (max-width: @screen-xs-max) {
+            text-align: left;
+        }
+    }
+
+    .process-name {
+        width: @recruiting-process-input-width;
+        margin-right: 28px;
+    }
+
+    .process-step-name-section {
+        width: @recruiting-process-name-area-width;
+    }
+
+    .process-step-name {
+        width: 100%;
+    }
+
+    .row-margin {
+        margin-bottom: @padding-base-vertical;
+        margin-top: @padding-base-vertical;
+    }
+
+    .inactive-list-margin {
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    .process-step-index,
+    .process-step-name-section,
+    .form-inline > .btn-group,
+    .form-inline > .btn {
+        margin-right: @recruiting-process-element-margin-right;
+    }
+
+    .process-step-action-and-prerequisite-text {
+        vertical-align: middle;
+    }
+
+    .new-process-step-name-section {
+        display: inline;
+    }
+
+    .process-number-badge {
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        color: white;
+        padding-top: @padding-base-vertical;
+        padding-bottom: @padding-base-vertical;
+        border-radius: 3px;
+        margin-right: 3px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .new-process-step-name {
+        @media (min-width: @screen-xs-min) {
+            width: 76%;
+        }
+    }
+
+    span.required {
+        color: red;
+    }
+
+    span.not-required {
+        visibility: hidden;
+    }
+
+    .new-recruiting-process-addstep-name {
+        width: 84%;
+        margin-top: 10px;
+    }
+
+    .delayed-alert {
+        .ml-1;
+        font-style: italic;
+    }
+
+    .alert-with-delay {
+        max-width: 100%;
+        padding: 0px;
+        margin-bottom: 1px;
+    }
+
+    .process-step-name-no-delay-length {
+        max-width: 111px;
+
+        @media @tablet {
+            max-width: 107px;
+        }
+
+        @media @phone {
+            max-width: 107px;
+        }
+    }
+
+    .process-step-max-name-length {
+        max-width: 111px;
+
+        @media @tablet {
+            max-width: 76px;
+        }
+
+        @media @phone {
+            max-width: 76px;
+        }
+    }
+
+    .new-process-step-action-and-prerequisite-text {
+        vertical-align: middle;
+        font-size: 10px;
+    }
+
+    .new-process-step-action-none-option {
+        vertical-align: middle;
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    .new-alert {
+        padding: 6px;
+        margin-bottom: 0px;
+
+        .badge {
+            font-size: 100%;
+        }
+    }
+
+    .new-process-step {
+        padding-bottom: @padding-large-vertical;
+        margin-top: @padding-large-vertical;
+        /* browser support */
+        -webkit-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -moz-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -o-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -ms-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        transition: background ease-in-out 0.15s, box-shadow linear 0.2s; /* this transition is used by ExpandedPanel.tsx */
+        transition-delay: 0.2s;
+    }
+
+
+    tr[class^="new-process-step-"] {
+        padding-bottom: @padding-large-vertical;
+        margin-top: @padding-large-vertical;
+        /* browser support */
+        -webkit-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -moz-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -o-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        -ms-transition: background ease-in-out 0.15s, box-shadow linear 0.2s;
+        transition: background ease-in-out 0.15s, box-shadow linear 0.2s; /* this transition is used by ExpandedPanel.tsx */
+        transition-delay: 0.2s;
+    }
+
+    .align-center {
+        padding-left: 2.70%;
+    }
+
+    .more-actions-link {
+        cursor: pointer;
+    }
+
+    .step-divider-row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .step-divider {
+        border-bottom: 1px solid lightgray;
+    }
+
+    @media @tablet {
+        .process-name-small {
+            width: inherit;
+        }
+
+        .process-number-badge {
+            width: 24px;
+            height: 24px;
+            padding-top: 3px;
+            margin-right: 0;
+            margin-top: 3px;
+        }
+    }
+
+    @media @phone {
+
+
+        .process-name-small {
+            width: inherit;
+        }
+
+        .process-number-badge {
+            width: 24px;
+            height: 24px;
+            padding-top: 3px;
+            margin-right: 0;
+            margin-top: 3px;
+        }
+
+        .small-alert {
+            max-width: 100%;
+        }
+    }
+}
+
+h4 .badge {
+    margin-right: @padding-xs-horizontal;
+}

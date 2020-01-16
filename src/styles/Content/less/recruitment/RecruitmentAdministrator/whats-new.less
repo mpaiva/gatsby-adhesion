@@ -1,0 +1,110 @@
+﻿.feature-showcase-banner {
+    @media screen and (max-width: @screen-sm-max) {
+        display: none;
+    }
+}
+.feature-preview-template {
+    .preview-header {
+        padding-left: 15px;
+
+        .feature-name {
+            margin-bottom: 0px;
+        }
+
+        .translations-not-available-label {
+            font-weight: bold;
+            padding-top: 10.5px;
+            padding-right: 5px;
+            margin-bottom: 10.5px;
+            display: inline-block;
+        }
+
+        .on-label {
+            font-weight: bold;
+            color: @us-primary-light-green;
+            padding-right: 5px;
+        }
+    }
+
+    .cannot-toggle-row {
+        padding-left: 30px;
+        padding-right: 15px;
+        padding-top: 15px;
+
+        .cannot-toggle-area {
+            background-color: @layout-tint-lighter-color;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            padding-left: 10px;
+        }
+
+        .cannot-toggle-lock {
+            width: 25px;
+            height: 25px;
+            padding-top: 6px;
+            font-size: 120%;
+            color: @us-primary-help-block-color;
+        }
+
+        .cannot-toggle-text {
+            padding-left: 5px;
+        }
+    }
+
+    .description-row {
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-right: 15px;
+
+        .description-div {
+            padding-left: 15px;
+        }
+    }
+
+    .image-row {
+        width: 100%;
+    }
+
+    .help-url {
+        padding-left: 15px;
+        text-align: right;
+    }
+
+    .dropdown-row {
+        padding-left: 15px;
+    }
+}
+
+.feature-showcase-banner {
+    position: relative;
+
+    .banner-image {
+        width: 100%;
+    }
+
+    .showcased-feature {
+        color: white;
+        display: inline-block;
+        position: absolute;
+        bottom: 30%;
+        right: 7%;
+        text-align: right;
+        width: 33%;
+
+        h3 {
+            color: white;
+        }
+
+        .description {
+            font-size: smaller;
+        }
+
+        .button-container {
+            padding-top: 15px;
+
+            a {
+                color: #509e2f;
+            }
+        }
+    }
+}

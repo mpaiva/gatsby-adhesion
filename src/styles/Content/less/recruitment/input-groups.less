@@ -1,0 +1,19 @@
+﻿.form-control + .input-group-btn.input-group-btn-addon {
+    padding-left: 0;
+
+    > .btn {        
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+.input-group-btn.input-group-btn-addon button {
+    box-shadow: none;    
+    border-top-color: @input-border;
+    border-right-color: @input-border;
+    border-bottom-color: @input-border;
+    @media (max-width: @screen-xs-max) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

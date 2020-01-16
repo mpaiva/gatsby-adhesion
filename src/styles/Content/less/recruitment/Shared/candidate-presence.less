@@ -1,0 +1,71 @@
+﻿.candidate-controller .viewpresence-action,
+.opportunity-controller .apply-action {
+
+    .candidate-presence-well {
+        @media (min-width: @screen-sm-min) {
+            .well;
+            .well-light;
+        }
+    }
+
+    .candidate-presence {
+        #CandidateNameEdit {
+            margin-bottom: 20px;
+        }
+
+        .multigroup-item {
+            .skill {
+                min-height: 100px;
+            }
+        }
+
+        .documents-row-read-only {
+            .file {
+                .well();
+                .well-sm();
+                border-color: #fff;
+                background-color: #fff;
+            }
+        }
+
+        .documents-row-edit {
+            .document-upload {
+                position: relative;
+            }
+        }
+
+        #Applications {
+            margin-top: @line-height-computed;
+
+            .open-application-item {
+                .well-light();
+            }
+
+            .closed-application-item {
+                .muted();
+            }
+        }
+
+        #Presence {
+            margin-top: @line-height-computed;
+        }
+
+        #ResumeUploader {
+            margin-bottom: 5px;
+        }
+
+        .clickable-header {
+            cursor: pointer;
+}
+        .disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+
+        .disabled-small{
+            opacity: .5;
+            cursor: not-allowed;
+            width: 200px;
+        }
+    }
+}

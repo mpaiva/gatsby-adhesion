@@ -1,0 +1,32 @@
+﻿.btn.btn-primary,
+.btn.btn-primary.btn-lg,
+.btn.btn-success {
+    .us-responsive();
+
+    & + &,
+    & + .action-link,
+    .action-link + & {
+        @media (max-width: @screen-xs-max) {
+            margin-top: @us-base-margin-width;
+        }
+    }
+}
+
+.btn:not(.btn-loading) {
+  &:disabled,
+  &[disabled],
+  &.disabled {
+    pointer-events: all;
+    cursor: not-allowed;
+    color: #808080;
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+}
+
+form .btn + .action-link,
+form .btn + .btn {
+  @media (min-width: @screen-sm-min) {
+    margin-left: @us-base-margin-width;
+  }
+}

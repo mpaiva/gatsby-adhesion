@@ -1,0 +1,79 @@
+﻿.bar-spinner {
+    display: block;
+    position: relative;
+    height: 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.bar-spinner.bar-spinner-progress__indeterminate>.bar1 {
+    -webkit-animation-name: indeterminate1;
+    animation-name: indeterminate1;
+}
+
+.bar-spinner>.progressbar {
+    background-color: #7d7d7d;
+    z-index: 1;
+    left: 0;
+}
+
+.bar-spinner>.bufferbar {
+    background-image: linear-gradient(to right,rgba(255,255,255,.7),rgba(255,255,255,.7)),
+        linear-gradient(to right,#484848 ,#848484);
+    z-index: 0;
+    left: 0;
+}
+
+
+.bar-spinner.bar-spinner-progress__indeterminate>.bar1 {
+    background-color: #a7a7a7;
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.bar-spinner>.bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width .2s cubic-bezier(.4,0,.2,1);
+}
+
+@-webkit-keyframes indeterminate1 {
+    0% {
+        left: 0%;
+        width: 0%
+    }
+
+    50% {
+        left: 25%;
+        width: 75%
+    }
+
+    75% {
+        left: 100%;
+        width: 0%
+    }
+}
+
+@keyframes indeterminate1 {
+    0% {
+        left: 0%;
+        width: 0%
+    }
+
+    50% {
+        left: 25%;
+        width: 75%
+    }
+
+    75% {
+        left: 100%;
+        width: 0%
+    }
+}

@@ -1,0 +1,166 @@
+﻿@spc-day-width: 63px;
+@spc-cell-width: 32px;
+@spc-cell-height: 30px;
+
+
+.schedule-picker-control {
+  display: block;  
+  .morning {
+      color: @orange !important;
+  }
+  .night {
+      color: @blue !important;
+  }
+
+  daytime-picker {
+    padding: 0 12px 0 0;
+    display: block;
+  }
+  .day-actions {
+      .btn.selected {
+          color: @blue-selected;
+      }
+  }
+}
+
+.schedule-picker-control .interval-select {
+  margin-bottom: @padding-base-vertical *3;
+  td {
+    width: @spc-day-width;
+    cursor: pointer;
+    padding: 12px 12px;
+    text-align:center;
+    vertical-align:middle;
+    background-color: #fff;
+    border:1px solid #ccc;
+    font-family: @font-family-serif;
+    &:hover {
+      background: @us-primary-lighter-gray;
+    }
+  }
+  td.selected {
+    background: @blue-selected;
+    color: white;
+  }
+  td.highlighted {
+    background-color: @us-primary-lighter-gray;
+    color: white;
+  }
+}
+
+.schedule-picker-control .schedule-picker-header{
+    margin-top:40px;
+    width: 76%;
+    tr.no-border {
+        td { 
+            border: none; 
+        }
+    }
+    .header-title {
+            text-align:left;
+            width: 60%;
+        }
+    .reset-btn-cell{
+            text-align:right;
+            width: 40%;
+         }
+}
+
+.schedule-picker-control .interval-labels {
+  margin-left: 35px;
+  font-family: @font-family-serif;
+  tr.no-border {
+    td { border: none; }
+  }
+  tr.labels {
+      text-align: center;
+  }
+  td {
+    width: @spc-cell-width;
+    padding: 6px 0;
+    border-top: 1px solid @blue;
+    color: @blue;
+    &:nth-of-type(-n + 12) {
+      color: @orange;
+      border-top: 1px solid @orange;
+    }
+  }
+}
+
+
+.schedule-picker-control .day-hours {
+  table {
+    margin-bottom: 16px;
+  }
+  td.label-cell {
+    padding: 6px 0;
+    width: 50px;
+    span {
+      display: block;
+      width: @spc-cell-width;
+    }
+  }
+  td.time-cell {
+    cursor: pointer;
+    border:1px solid #ccc;
+    width: @spc-cell-width;
+    &:hover {
+      background: @us-primary-lighter-gray;
+    }
+    &.selected {
+      background: @blue-selected;
+      color: white;
+    }
+    &.highlighted {
+      background: @blue-potential;
+    }
+  }
+}
+
+@media print {
+    .schedule-picker-control .interval-select td.selected,
+    .schedule-picker-control .day-hours td.time-cell.selected {
+        border: 1px double black;
+        color: black !important;
+    }
+}
+
+.schedule-picker-control .day-hours-labels {
+  margin-left: 34px;
+  margin-top: -16px;
+  td.time-label-cell {
+    width: @spc-cell-width;
+    line-height: 1em;
+    border: none;
+    text-align: center;
+    visibility: hidden;
+    font-family: @font-family-serif;
+    color: @blue;
+    &:nth-of-type(-n + 12) {
+      color: @orange;
+    }
+    i {
+      font-size: 1.4em;
+      line-height: 0.5em;
+    }
+    span {
+      display: block;
+      line-height: 1em;
+      font-size: .7em;
+      width: 26px;
+      @media (min-width: @screen-lg-min) {
+        width: @spc-cell-width;
+      }
+    }
+    &.shown {
+      visibility: visible;
+    }
+  }
+}
+
+.hour-interval-picker {
+    margin-bottom: @padding-base-vertical *2;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}

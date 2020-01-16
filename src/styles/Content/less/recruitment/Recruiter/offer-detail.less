@@ -1,0 +1,196 @@
+﻿#OfferDetails {
+    .actions-change-indicator {
+        text-align: right;
+        margin-right: 7px;
+    }
+
+    .section-line {
+        border-bottom: 1px solid #cfcfcf;
+    }
+
+    .badge-important {
+        position: absolute;
+        left: 2px;
+        top: -10px;
+        color: @btn-danger-bg;
+        background-color: @btn-danger-color;
+        border: solid 2px @btn-danger-bg;
+        font-weight: bolder;
+        font-size: @font-size-base;
+        z-index: 1;
+        width: 23px;
+        height: 23px;
+    }
+
+    .offer-label-group{
+        display: inline-block;
+    }
+    .progress-spinner-content {
+        left: 20% !important;
+    }
+
+    .none {
+        .text-italic;
+        color: @no-info;
+    }
+
+    .summary {
+        label {
+            font-weight: 400;
+        }
+    }
+
+    .travel-required {
+        .mr-2;
+        .my-0;
+        vertical-align: middle;
+    }
+
+    .compensation-amount {
+        width: 65%
+    }
+
+    .compensation-code {
+        width: 35%
+    }
+
+    .templates-brands {
+
+        label {
+            display: 'block';
+        }
+    }
+
+    .preview-html {
+        overflow: auto;
+
+        &.faded {
+            opacity: 0.5;
+        }
+
+        .merge-tag {
+            background-color: rgba(75, 144, 226, 0.11);
+            color: rgba(75, 144, 226, 1);
+        }
+
+        .invalid-merge-tag {
+            background-color: rgb(244, 228, 228);
+            color: #EE5757;
+        }
+
+        .redacted-merge-tag {
+            background-color: #EEE;
+            color: #515151;
+        }
+    }
+
+    .offer-actions {
+        .expiration-text {
+            font-size: @standard-font-size; 
+        }
+    }
+
+    .preview-fields {
+        .mt-2;
+        .pull-right;
+        font-size: @font-size-base;
+        font-family: @font-family-sans-serif
+    }
+
+    .approval-comment-header {
+        .pl-1;
+    }
+
+    .approval-task {
+        .ml-1;
+        .mr-1;
+        .pb-3;
+
+        &.list-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            .pt-3;
+
+            &:only-of-type {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            }
+
+            &:last-of-type {
+                border: none;
+            }
+        }
+
+        .approver-name {
+            .mr-2;
+        }
+
+        .approver-lost-role {
+            display: inline-block;
+        }
+    }
+
+    .no-activity {
+        text-align: center;
+    }
+
+    button:disabled {
+        pointer-events: all;
+        cursor: not-allowed;
+        color: #808080;
+        background-color: #ccc;
+        border-color: #ccc;
+        opacity: 0.65;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .fa-check-circle {
+        color: @us-approval-status-approved-color;
+    }
+
+    .fa-times-circle {
+        color: @us-approval-status-rejected-color;
+    }
+
+    .offer-body-errors {
+        margin-top: -20px;
+    }
+
+    .badge {
+        margin-left: 6px !important;
+    }
+
+    .activity-not-selected {
+        color: #0F41B8 !important;
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+
+    .activity-comment {
+        white-space: pre-wrap;
+    }
+
+    
+
+    .offer-unsigned-content {
+        width: 230px;
+        height: 80px;
+    }
+
+    .offer-unsigned-line {
+        border-bottom: 1.5px solid @online-offers-signature-box-color;
+    }
+
+    .offer-unsigned-name {
+        font-weight: normal;
+        position: absolute
+    }
+
+    .offer-notes {
+        white-space: pre-wrap;
+    }
+}

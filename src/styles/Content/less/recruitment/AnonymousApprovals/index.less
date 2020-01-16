@@ -1,0 +1,181 @@
+﻿.anonymous-approval-container {
+    #OpportunityEmailApprovals {
+        .none {
+            font-style: italic;
+            color: #a8a8a8;
+        }
+    }
+
+    .anonymous-approval {
+        width: 80%;
+        margin: 0 auto;
+        word-wrap: break-word;
+        word-break: break-word; 
+    }
+
+    .faded-text {
+        font-size: 12px;
+        color: #a8a8a8;
+    }
+
+    .approval-confirmation {
+        margin-top: 15px;
+        margin-left: 50px;
+
+        .fa-check-circle {
+            font-size: 60px;
+            color: #5ca616;
+        }
+
+        .approval-title {
+            font-size: 24px;
+        }
+    }
+
+    .list {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            word-wrap: break-word;
+        }
+    }
+
+    .justification-comment-list {
+        li {
+            border-bottom: 1px solid #cfcfcf;
+            padding-top: 1em;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .approve-reject-buttons {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .powered-by-ultipro {
+        padding-bottom: 100px;
+    }
+
+    .rejection-confirmation {
+        margin-top: 15px;
+        margin-left: 50px;
+
+        .fa-info-circle {
+            font-size: 60px;
+            color: #31708F;
+        }
+
+        .rejection-title {
+            font-size: 24px;
+        }
+    }
+
+    .error-page {
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    
+
+    @media only screen and (max-width: 500px) {
+        .anonymous-approval {
+            width: initial;
+            margin: 0;
+        }
+
+        .thin-line {
+            border-bottom: solid thin;
+            border-bottom-color: gainsboro;
+            padding-bottom: 25px;
+        }
+
+        .approval-confirmation {
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .pt-2 {
+                padding-top: 25px;
+            }
+
+            .fa-check-circle {
+                font-size: 90px;
+                padding-bottom: 30px;
+            }
+
+            .approval-title {
+                text-align: center;
+            }
+        }
+
+        .rejection-confirmation {
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .pt-2 {
+                padding-top: 25px;
+            }
+
+            .fa-info-circle {
+                font-size: 90px;
+                padding-bottom: 30px;
+            }
+
+            .rejection-title {
+                text-align: center;
+            }
+        }
+
+        .error-page {
+            margin: 0 auto; 
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            .error-page-title {
+                text-align: center;
+            }
+
+            .pt-2 {
+                padding-top: 25px;
+            }
+
+            .fa-times-circle {
+                font-size: 90px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .anonymous-approval {
+            margin-top: -45px;
+        }
+    }
+}

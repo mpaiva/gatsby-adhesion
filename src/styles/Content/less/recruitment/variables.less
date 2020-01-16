@@ -1,0 +1,304 @@
+
+@us-image-base-path: "../../../ultistylekit/images";
+@us-font-base-path: "../../../ultistylekit/fonts";
+@fa-font-path: "../../font-awesome/fonts";
+
+// Scaffolding
+@grid-columns: 24;
+@content-padding: 40px;
+@base-spacing: @padding-base-vertical*2;
+
+// Ultimate Software Colors
+@us-primary-blue: #408BC4;
+@us-primary-light-green: #5CA616;
+@us-primary-super-green: #81c540;
+@us-primary-dark-green: #4B9510;
+@us-primary-dark-gray: #404040;
+@us-primary-gray: #CCCCCC;
+@us-primary-light-gray: #E5E5E5;
+@us-primary-lighter-gray: #f5f5f5;
+
+@us-approval-status-current-color:  #ec971f;
+@us-approval-status-pending-color:  #ec971f;
+@us-approval-status-rejected-color: #d40200;
+@us-approval-status-approved-color: #5cb85c;
+
+@us-publishing-status-draft-color:            #5bc0de;
+@us-publishing-status-published-color:        #5cb85c;
+@us-publishing-status-pending-approval-color: #ec971f;
+@us-publishing-status-rejected-color:         #d40200;
+@us-publishing-status-closed-color:           #999;
+@us-publishing-status-approved-color:         #146BA3;
+
+@us-offer-status-draft-color:            #5BC0DE;
+@us-offer-status-pending-approval-color: #F5B55B;
+@us-offer-status-rejected-draft-color:   #F26463;
+@us-offer-status-ready-color:            #78BC5C;
+@us-offer-status-cancelled-color:        #BDBDBD;
+@us-offer-status-sent-color:             #085C66;
+@us-offer-status-received-color:         #7A4183;
+@us-offer-status-negotiating-color:      #F38A00;
+@us-offer-status-accepted-color:         #4D9C2D;
+@us-offer-status-declined-color:         #D40200;
+@us-offer-status-rescinded-color:        #646469;
+
+@us-offer-expired-color:                 #D40200;
+@us-offer-signed-color:                  #4D9C2D;
+@us-offer-acknowledged-color:            #4D9C2D;
+
+@us-candidate-offer-rescinded-color: #D40200;
+@us-candidate-offer-notavailable-color: #D40200;
+@us-candidate-offer-declined-color: #D40200;
+
+@small-header-logo-max-width: 75px;
+
+// Candidate Availability Colors
+@orange: #e68d00;
+@blue: #246baa;
+@blue-darker: #0a4377;
+@blue-selected: #0F41B8;
+@blue-potential: #d3ebff;
+
+//typeahead filter
+@red-error-msg: #CC0000;
+
+@red-error-times-circle: #A94442;
+
+@brand-highlight: @us-primary-light-green;
+
+@xs-filter-min-width: 184px;
+@small-filter-min-width: 270px;
+@large-filter-min-width: 320px;
+
+// UltiPro Colors
+@ultipro-brand-primary-color: #509e2f;
+@ultipro-brand-lighter-color: #5bb236;
+@ultipro-brand-darker-color: #3b7921;
+
+// General container color
+// --------------------------------------------------
+@us-container-background-color: #EEEEEE;
+@us-container-border-color: darken(@us-container-background-color, 12%);
+
+// Footer
+// --------------------------------------------------
+@us-footer-background-color: @us-container-background-color;
+
+// Opportunities
+// --------------------------------------------------
+@us-featured-opportunity-label-color:   #f89406;
+@us-active-opportunity-label-color:     @us-primary-light-green;
+@us-closed-opportunity-label-color:     #000;
+@us-draft-opportunity-label-color:      @gray-light;
+@us-pending-opportunity-label-color:    @brand-info;
+@us-rejected-opportunity-label-color:   @brand-danger;
+
+@us-full-time-label-color: #799aaa;
+@us-part-time-label-color: #79aa80;
+
+@thirdparty-color: #815fd6;
+@linkedin-color: #1A84BC;
+@notposted-color: #bc371a;
+
+// Candidate type labels (eg. on detail pages)
+@candidate-indicator-internal-color: @us-primary-super-green;
+@candidate-indicator-external-color: transparent;
+@candidate-indicator-inactive-color: @gray-light;
+
+// Candidate type indicators (eg. on list pages)
+// These should probably be consistent with above colors but are too light to work for badges due to poor contrast with white text
+@candidate-type-indicator-internal-color: #cedc00;
+@candidate-type-indicator-external-color: transparent;
+@candidate-type-indicator-inactive-color: #ced9e5;
+
+// Panels
+@panel-title-height: 34px;
+
+// Forms
+@control-label-fw-width:         250px;
+
+// Navbar
+@navbar-height:                    90px;
+@navbar-margin-bottom:             0;
+@navbar-border-radius:             0;
+@navbar-border-size:               4px;
+@navbar-border-width:              0 0 @navbar-border-size 0;
+
+@navbar-small-height:                    50px;
+@navbar-small-padding-vertical:          ((@navbar-small-height - @line-height-computed) / 2);
+
+@navbar-default-color:             #fff;
+@navbar-default-bg:                @brand-highlight;
+@navbar-default-border:            @us-primary-dark-green;
+
+// Navbar links
+@navbar-default-link-color:                #fff;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-active-color:         #fff;
+
+// Navbar toggle
+@navbar-default-toggle-icon-bar-bg:        #ccc;
+
+// Navbar links
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-disabled-link-color:                   @gray-light;
+@nav-disabled-link-hover-color:             @gray-light;
+
+@nav-open-link-hover-color:                 #fff;
+
+// Tabs
+@nav-tabs-border-color:                     #cfcfcf;
+@nav-tabs-link-bg:                          #eee;
+
+@nav-tabs-link-hover-bg:                    @nav-tabs-border-color;
+@nav-tabs-link-hover-border-color:          @nav-tabs-border-color;
+
+@nav-tabs-link-color:                       @text-color;
+
+@nav-tabs-active-link-hover-bg:             #fff;
+@nav-tabs-active-link-hover-color:          @text-color;
+@nav-tabs-active-link-hover-border-color:   @nav-tabs-border-color;
+
+@nav-tabs-justified-link-border-color:            @nav-tabs-border-color;
+@nav-tabs-justified-active-link-border-color:     transparent;
+
+// *** Drives the recruiter nav ***
+// Inverted navbar
+@navbar-inverse-color:                      #000;
+@navbar-inverse-bg:                         #fff;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-border-top-color:           @us-primary-light-green;
+@navbar-inverse-border-top-width:           4px;
+@navbar-inverse-border-bottom-width:        1px;
+@navbar-inverse-height-with-border:         @navbar-small-height + 
+                                            @navbar-inverse-border-top-width + 
+                                            @navbar-inverse-border-bottom-width;
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 @link-color;
+@navbar-inverse-link-hover-color:           @navbar-inverse-link-color;
+@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             transparent;
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                #404040;
+@navbar-inverse-brand-hover-color:          @navbar-inverse-brand-color;
+@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            transparent;
+@navbar-inverse-toggle-icon-bar-bg:         @us-primary-blue;
+@navbar-inverse-toggle-border-color:        #333;
+
+// Iconography
+@icon-collapse-indicator-width:     14px;
+@fa-fw-width: (18em / 14);
+@fa-fw-lg-width: (4em / 3) * @fa-fw-width;
+
+// Components
+@border-radius-base:             3px;
+@border-radius-large:            3px;
+@border-radius-small:            2px;
+
+// Tables
+@tr-selected-background-color:       #EFF4FB;
+
+// Tooltips
+@tooltip-background-color: #515151;
+@tooltip-arrow-color: @tooltip-background-color;
+
+// Buttons
+@btn-margin-right:               7px;
+@btn-padding:                    10px;
+@btn-margin-vertical:           2px;
+
+// Z-index
+@zindex-overlay:           900;
+@zindex-popover:           1010;
+@zindex-tooltip:           1030;
+@zindex-base:              10;
+
+// Form states and alerts
+@state-warning-text:             #D19D18;
+@state-danger-text:              #d40200;
+
+// Recruiting step badge colors
+@recprocess-step-accepted: #509E2F;
+@recprocess-step-rejected: #003B5C;
+@recprocess-step-initial: #7A4183;
+@recprocess-step-between: #ED8B00;
+
+// Disposition badges
+@disposition-badge-applied: #0076ff;
+@disposition-badge-hired: #509e2f;
+@disposition-badge-declined: #e84242;
+@disposition-badge-color-1: #fA8839;
+@disposition-badge-color-2: #89448f;
+@disposition-badge-color-3: #1d389b;
+@disposition-badge-color-4: #ffca3e;
+@disposition-badge-color-5: #b27cd0;
+@disposition-badge-color-6: #5f5f5f;
+@disposition-badge-color-7: #67aaf8;
+@disposition-badge-color-8: #305b55;
+@disposition-badge-color-9: #a60879;
+@disposition-badge-color-10: #9e8e57;
+@disposition-badge-color-11: #491b4e;
+@disposition-badge-color-12: #d29230;
+@disposition-badge-color-13: #0d91b0;
+@disposition-badge-color-14: #ff00b6;
+@disposition-badge-color-15: #b8510b;
+@disposition-badge-color-16: #83dfff;
+@disposition-badge-color-17: #a400ff;
+@disposition-badge-color-18: #1b00ff;
+@disposition-badge-color-19: #00bdff;
+@disposition-badge-color-20: #316875;
+@disposition-badge-color-21: #624923;
+@disposition-badge-color-22: #255389;
+@disposition-badge-color-23: #eea4d9;
+@disposition-badge-color-24: #d6cd46;
+
+//recruiter dashboard colors 
+@dashboard-background-color: #f5f4f2; 
+@axis-line-color: #e0e7ff; 
+@disabled-option: #a8a8a8;
+@dashboard-hover-color: #f5f5f5;
+
+//dashboard font-sizes
+@smaller-font-size: 11px; 
+@standard-font-size: 13px; 
+@bigger-font-size: 15px; 
+
+// HR border color
+@hr-border:                   #cfcfcf;
+@hr-border-light:             #e5e5e5;
+@hr-border-lighter:           #ddd;
+
+//RecAdminSettings font-sizes
+@smaller-settings-font-size: 11px;
+
+//OfferOffersAndElectronicSignatures variables
+@online-offers-xs-font-size: 11px;
+@online-offers-smaller-font-size: 13px;
+@online-offers-standard-font-size: 15px;
+@online-offers-bigger-font-size: 20px;
+@online-offers-signature-box-color: #a8a8a8;
+@online-offers-signature-color: #515151;
+@online-offers-spacing-big: 50px;
+@online-offers-spacing-small: 40px;
+@online-offers-signature-button-spacing-tb: 28px;
+@online-offers-signature-button-spacing-lr: 62px;
+
+@badge-recruitingprocess-step-setting-action-and-prerequisite-color:        #0a4377;
+
+@no-info: lighten(@gray-base, 65.7%);
+
+@desktop: %(~"only screen and (min-width: %D)", @screen-md);
+@tablet: %(~"only screen and (min-width: %D) and (max-width: %D)", @screen-sm, @screen-md);
+@phone: %(~"only screen and (min-width: 0px) and (max-width: %D)", @screen-sm);
+@smallest-phone: ~"only screen and (min-width: 0px) and (max-width: 600px)";
+

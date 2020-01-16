@@ -1,0 +1,64 @@
+﻿.visibility-component {
+
+    .visibility-blue-check{
+        color:@blue;
+    }
+
+    .visibility-menu {
+        min-width :170px;
+        left:auto !important;
+     }
+
+    .view-more-visibility{
+        text-decoration: none !important;
+        color: @blue-selected;
+        vertical-align:-webkit-baseline-middle;
+    }
+
+    .view-more-visibility-disabled{
+        > span{
+            text-decoration: none !important;
+            color: @text-disabled-color;
+            vertical-align:-webkit-baseline-middle!important;
+        }
+    }
+
+    .visibility-option-item{
+        padding : 0px;
+        &:hover,
+        &:focus{
+            text-decoration: none;
+            color:  @layout-tint-lighter-color;
+            background-color:  @layout-tint-lighter-color;
+         }
+         > a{
+              padding : 5px !important;
+              &:hover,
+              &:focus{
+                  text-decoration: none;
+                  background-color:  @layout-tint-lighter-color !important;
+              }
+         }
+     }
+
+
+    .blue{
+        color: @blue-selected;
+    }
+
+    .gray{
+        color:@text-disabled-color;
+    }
+
+    .visibility-options-align{
+        display:block;
+        cursor: pointer; cursor: hand;
+        > i{
+            vertical-align:-webkit-baseline-middle;
+        }
+
+        > label{
+            vertical-align:-webkit-baseline-middle;
+        }
+     }
+}

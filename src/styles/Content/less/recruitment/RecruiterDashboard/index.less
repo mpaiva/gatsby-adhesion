@@ -1,0 +1,526 @@
+.dashboard-controller {
+    background-color: @dashboard-background-color;
+
+    .container {
+        overflow-x: hidden;
+    }
+
+    .recruiter-dashboard {
+        .collapsible-dashboard-filter {
+            .collapsible-filter-btn {
+                font-size: @standard-font-size;
+                vertical-align: text-top;
+            }
+        }
+
+        .opportunities-widget {
+            .recharts-cartesian-axis-tick-value {
+                cursor: pointer;
+            }
+
+            .recharts-surface{
+                cursor: pointer;
+            }
+
+            .recharts-wrapper-hover {
+                background-color: @dashboard-hover-color;
+            }
+
+            .recharts-wrapper-no-hover {
+                background-color: white;
+            }
+        }
+
+        .none {
+            font-style: italic;
+            color: @disabled-option;
+        }
+
+        .search-filter {
+            -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+            align-items: baseline;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+
+            .widget-filter {
+                button {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .opportunity-applications-container {
+            .widget-header-container {
+                height: 35px;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+        }
+
+        .recharts-rectangle {
+            cursor: pointer;
+        }
+
+
+        .vertical-align {
+            vertical-align: text-top;
+        }
+
+        .option-label {
+            width: inherit;
+        }
+
+        .opportunity-popover {
+            ul {
+                list-style: none;
+            }
+        }
+
+        .opportunity-applications-widget {
+            .widget-filters {
+                text-align: right;
+                -ms-flex-preferred-size: 30%;
+                flex-basis: 30%;
+            }
+        }
+
+        .widget-search-container {
+            text-align: right;
+
+            .searchbar-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .widget-searchbar {
+                width: 100%;
+                resize: none;
+                vertical-align: bottom;
+                border-radius: 5px;
+                height: 35px;
+                line-height: 30px;
+                overflow: hidden;
+                white-space: nowrap;
+                border-color: @us-primary-gray;
+                color: @text-color;
+
+                &::-webkit-input-placeholder,
+                &:-ms-input-placeholder,
+                &::-webkit-input-placeholder {
+                    color: @disabled-option;
+                }
+
+                &::-webkit-input-placeholder,
+                &:-ms-input-placeholder,
+                &::placeholder {
+                    color: @disabled-option;
+                }
+            }
+
+
+
+            .search-button {
+                font-size: @standard-font-size;
+                color: @us-primary-help-block-color;
+            }
+
+            .search-entered {
+                font-size: @standard-font-size;
+            }
+        }
+
+        .search-open {
+            width: 100%;
+        }
+
+        .loading-error {
+            height: 300px;
+            width: 100%;
+
+            .loading-error-content {
+                text-align: center;
+                position: relative;
+                top: 35%;
+                font-size: @bigger-font-size;
+
+                .fa-times-circle {
+                    font-size: 50px;
+                    color: @state-danger-text;
+                }
+            }
+        }
+
+        .coming-soon-banner {
+            background: white;
+            border-radius: 3px;
+            border: 1px solid #DDDDDD;
+
+            .banner-text {
+                .title {
+                    text-transform: uppercase;
+                    font-size: @smaller-font-size;
+                    font-weight: 500;
+                }
+
+                .subtext {
+                    color: @us-primary-help-block-color;
+                }
+            }
+
+            .fa-gift {
+                color: @ultipro-brand-primary-color;
+                padding-left: 8px;
+                font-size: 2em;
+            }
+        }
+
+        .widget-container {
+            background: white;
+            min-height: 380px;
+            border: 1px solid #DDDDDD;
+            -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+
+            .total {
+                .count-number {
+                    font-size: 32px;
+                    font-weight: bold;
+                    padding-right: 5px;
+                }
+            }
+
+            .takeover-container {
+                position: relative;
+
+                .takeover {
+                    position: absolute;
+                    opacity: 1;
+                    z-index: 99;
+                    background-color: white;
+                    height: 100%;
+                    width: 100%;
+
+                    .spinner-content {
+                        position: relative;
+                        top: 40%;
+                        left: initial;
+                    }
+
+                    .times-container {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: right;
+
+                        .fa-times {
+                            color: @us-primary-help-block-color;
+                            font-size: 23px;
+                        }
+                    }
+
+                    .more-sources-list {
+                        .list-title {
+                            color: @us-primary-help-block-color;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+            .chart-container {
+                height: 300px;
+                width: 100%;
+                font-size: @standard-font-size;
+
+                .label-text {
+                    font-size: @standard-font-size;
+                    color: @text-color;
+                }
+
+                .more-sources-text {
+                    font-weight: normal;
+                }
+
+                .more-sources {
+                    padding: 0;
+
+                    .dropdown-content {
+                        text-align: left;
+                        padding-left: 5px;
+                    }
+
+                    button {
+                        font-size: @standard-font-size;
+                        color: #515151;
+                    }
+                }
+            }
+        }
+
+        .blank-data-container {
+            .blank-data {
+                text-align: center;
+                position: relative;
+                top: 35%;
+                font-size: @bigger-font-size;
+                color: @text-color;
+
+                .fa-line-chart {
+                    font-size: 5.25rem;
+                    color: @us-primary-gray;
+                }
+            }
+        }
+
+        .widget-header-container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+            align-items: center;
+
+            .widget-header {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            .widget-title {
+                color: @text-color;
+                font-size: @standard-font-size;
+                white-space: nowrap;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                margin-right: auto;
+            }
+
+            .widget-filters-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 100%;
+
+                .widget-filter {
+                    text-align: left;
+
+                    button {
+                        font-size: @standard-font-size;
+                        vertical-align: text-top;
+                    }
+
+                    .dropdown-filter {
+                        color: @text-color;
+                    }
+                }
+            }
+        }
+
+        .opportunity-applications {
+            min-height: 560px;
+
+            .spinner-container {
+                border-radius: inherit;
+                position: absolute;
+                opacity: 0.7;
+                background-color: rgb(255, 255, 255);
+                display: block;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+
+            .spinner-content {
+                top: 40%;
+                left: 40%;
+            }
+
+            .opportunity-applications-table {
+
+                tbody {
+                    width: 100%;
+                }
+
+                tr.opportunity-row {
+                    border-width: 1px;
+                    border-color: @hr-border;
+                    border-top-style: solid;
+                    border-bottom-style: solid;
+
+                    td {
+                        padding: 10px;
+                        min-width: 120px;
+                        text-align: center;
+                        font-size: @standard-font-size;
+                    }
+
+                    .opportunity-title {
+                        text-align: left;
+                        vertical-align: middle;
+                    }
+
+                    .opportunity-popover {
+                        .opportunity-title {
+                            text-align: left;
+                            vertical-align: middle;
+                            font-size: @bigger-font-size;
+                            font-weight: 300;
+                        }
+
+                        label {
+                            font-weight: 400;
+                        }
+
+                        div {
+                            font-weight: 300;
+                        }
+                    }
+
+                    .fill-cell {
+                        width: 100%;
+                        min-width: 0px;
+                    }
+
+                    td:first-of-type {
+                        border-right-style: solid;
+                        border-color: @hr-border;
+                        border-width: 1px;
+                        color: #515151;
+                        padding-left: 0px;
+                        text-align: left;
+                        min-width: 170px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dashboard-controller {
+        .recruiter-dashboard {
+            margin-left: -15px;
+            margin-right: -15px;
+
+            .opportunity-applications-widget {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .down-tooltip {
+                display: none;
+            }
+
+            .coming-soon-banner {
+                padding: 20px;
+
+                .banner-text {
+                    margin-top: initial;
+                    margin-bottom: initial;
+                    padding-left: 50px;
+                }
+
+                .fa-gift {
+                    margin-top: initial;
+                    margin-bottom: initial;
+                }
+            }
+
+            .opportunities-container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .opportunity-applications-container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .dashboard-controller {
+        .recruiter-dashboard {
+            .widget-searchbar {
+                height: initial;
+                line-height: initial;
+                margin: initial;
+
+                .search-bar {
+                    margin-bottom: initial;
+
+                    .form-control {
+                        margin: initial;
+                        height: initial;
+                        line-height: initial;
+                    }
+                }
+            }
+
+            .widget-search-container {
+                padding-right: 3px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .dashboard-controller {
+        .recruiter-dashboard {
+            .opportunity-applications-widget {
+                .widget-header-container {
+                    padding-left: 6px;
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+
+                    .widget-filters-container {
+                        -webkit-box-pack: start;
+                        -ms-flex-pack: start;
+                        justify-content: flex-end;
+                        margin-top: 5px;
+                        height: 25px;
+
+                        .dashboard-dropdown-content {
+                            left: auto;
+                            right: 0;
+                        }
+
+                        .search-open {
+                            width: 80%;
+                        }
+                    }
+
+                    .widget-header {
+                        display: initial;
+                    }
+                }
+            }
+        }
+    }
+}

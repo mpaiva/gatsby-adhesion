@@ -1,0 +1,305 @@
+﻿.validation-summary-errors {
+    .alert;
+    .alert-danger;
+
+    ul {
+        list-style-type: none;
+    }
+
+    dl {
+        margin: 0;
+    }
+
+    dd:last-child {
+        margin-bottom: 0;
+    }
+
+    dd {
+        color: @alert-danger-text;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-control {
+    @media (max-width: @screen-xs-max) {
+        margin-bottom: @btn-margin-vertical;
+    }
+}
+
+.form-control.form-control-inline-xs {
+    display: inline-block;
+    width: auto;
+}
+
+.form-control-auto-width {
+    width: auto;
+    max-width: 100%;
+}
+
+.textarea-limit, .input-text-limit, .email-address-suffix {
+    .text-muted;
+    text-align: right;
+    font-size: smaller;
+}
+
+.textarea-limit.textarea-limit-error {
+    color: @state-danger-text;
+}
+
+.input-text-limit.input-text-limit-error {
+    color: @state-danger-text;
+}
+
+.form-group.error {
+    color: @state-danger-text;
+    margin-bottom: 5px;
+
+    label {
+        color: @state-danger-text;
+    }
+}
+
+.form-group.error .field-errors {
+    color: @state-danger-text;
+}
+
+.mozilla-no-validate:invalid {
+    box-shadow: none;
+}
+
+.control-label-fw,
+.control-label-fw2x
+.control-label-fw3x {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.control-label-fw {
+    width: @control-label-fw-width;
+}
+
+.control-label-fw2x {
+    width: @control-label-fw-width + 60px;
+}
+
+.control-label-fw3x {
+    width: @control-label-fw-width + 120px;
+}
+
+.form-inline-text {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+// Remove margin if there's a label above a checkbox or radio
+label + .radio, label + .checkbox {
+    margin-top: 0;
+}
+
+.checkbox-no-margin {
+    margin: 0;
+}
+
+.form-centered-icon {
+    position: absolute;
+    padding-left: @padding-small-horizontal;
+}
+
+.form-inline-spaced {
+    .form-inline();
+
+    .form-group,
+    .checkbox,
+    .radio {
+        margin-right: 15px;
+    }
+}
+
+.help-block {
+    font-size: @font-size-small;
+}
+
+// Represents a form where the items have no padding/margins
+// Used when we have individual elements in the page (e.g. the publish opportunity grid)
+.form-no-padding {
+    label {
+        padding: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    input {
+        margin: 0;
+    }
+}
+
+// Used for forms where labels and inputs are separated
+.form-group-label-only {
+    margin: 0;
+}
+
+
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+
+.has-feedback {
+    // Enable absolute positioning
+    position: relative;
+    // Ensure icons don't overlap text
+    .form-control {
+        padding-right: (@input-height-base * 1.25);
+    }
+    // Feedback icon (requires .glyphicon classes)
+    // Modified for fa icons
+    .form-control-feedback {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: @input-height-base;
+        height: @input-height-base;
+        line-height: @input-height-base;
+        text-align: center;
+    }
+}
+
+.rank-input {
+    .input-sm;
+    width: 5.1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: @input-height-small - @padding-base-vertical*2 + 2px*2;
+}
+
+.paginated-panel {
+    .panel {
+        margin-bottom: 15px;
+    }
+
+    .panel + .pagination {
+        margin-top: 0px;
+    }
+}
+
+.alert.has-error {
+    .alert-danger;
+}
+
+fieldset.emphasize {
+    legend {
+        border: 0;
+        color: @gray-light;
+        font-size: 1em;
+        margin-bottom: 0;
+        padding: 0 @padding-large-vertical / 2;
+        width: auto;
+    }
+
+    border: 1px solid @us-primary-gray;
+    border-radius: @border-radius-base;
+    margin-bottom: @padding-large-vertical;
+    padding: @content-padding / 4 @content-padding / 2;
+}
+
+upload-files .file.row {
+    margin-top: @padding-large-vertical;
+}
+
+.upload-files-form {
+    margin-top: @padding-large-vertical * 2;
+}
+
+input[type=checkbox] {
+    cursor: pointer !important;
+}
+
+input[type=checkbox][disabled] {
+    cursor: default !important;
+}
+
+.buttons-top-padding {
+    padding-top: 6 * @padding-large-vertical;
+
+    .btn {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
+
+.with-informational-sidebar {
+    @media (min-width: @screen-md-min) {
+        border-right: 1px solid @pre-border-color;
+    }
+}
+
+.divided-section-left {
+    @media (min-width: @screen-md-min) {
+        border-right: 1px solid @pre-border-color;
+    }
+}
+
+.divided-section-left {
+    @media (min-width: @screen-md-min) {
+        border-right: 1px solid @pre-border-color;
+        padding-right: 40px;
+    }
+}
+
+.divided-section-right {
+    @media (min-width: @screen-md-min) {
+        padding-left: 40px;
+    }
+}
+
+.fadeBGTo(@state-success-bg, @body-bg);
+
+.table > thead > tr.success > td,
+.table > tbody > tr.success > td,
+.table > tfoot > tr.success > td {
+    background-color: @body-bg;
+    .animation(fadeBGTo 1s ease-in);
+}
+
+.well > h3 {
+    margin-top: 0;
+}
+
+.currency-group {
+    position: relative;
+    display: block;
+    min-width: 150px;
+
+    input {
+        padding-left: 30px;
+        float: none !important;
+        display: block !important;
+    }
+
+    &::before {
+        content: '$';
+        position: absolute;
+        width: 30px;
+        height: 34px;
+        padding: 6px 12px;
+        text-align: center;
+        vertical-align: middle;
+        color: #808080;
+        top: 1px;
+        z-index: 10;
+        pointer-events: none;
+    }
+}
+
+
+.preview-icon {
+    background: url('/Content/images/preview_icn.svg');
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+    cursor: pointer;
+}

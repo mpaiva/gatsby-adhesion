@@ -1,0 +1,67 @@
+﻿#PoolsList {        
+    .pool-item {        
+        position: relative;
+
+        .pool-name-link {
+            padding-right: 20px;
+
+            .pool-name {
+                margin-left: 4px;
+            }
+        }
+
+        .pool-menu-button {
+            @media (max-width: @screen-sm-max) {
+                display: none !important;
+            }
+
+            &:not(.open) {
+                display: none;
+            }
+
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -12px;
+
+            .btn-pool-dropdown {
+                width: 2em;
+                height: 2em;
+                font-size: 0.7em;
+                padding: 0;
+                background-color: transparent;
+                border: 1px solid #fff;
+                color: #fff;
+            
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            > ul > li {
+                padding: 0px;
+            }
+        }
+
+        &:hover .pool-menu-button {
+            display: block;
+        }
+
+    }
+
+    .pool-item,
+    .adding-pool {
+        display:flex;
+        justify-content: flex-end;
+        padding-right: 12px;
+
+        > input {
+            width: 78%;
+        }
+    }
+
+    .btn-add-pool {
+         font-weight: @us-font-weight;
+         padding: 0;
+     }
+}

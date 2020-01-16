@@ -1,0 +1,78 @@
+﻿.toggle-selector {
+    cursor: context-menu;
+
+    .toggle-trigger {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .opts {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    .toggle-list-option,
+    .toggle-list-no-option {
+        padding-top: 4px;
+        padding-bottom: 2px;
+        font-weight: 400;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        .px-3;
+
+        &:hover {
+            background-color: @layout-tint-lighter-color;
+        }
+
+        span.status {
+            padding: 2px;
+            margin-right: @padding-base-vertical;
+            color: @us-primary-gray;
+
+            &.enabled {
+                color: @us-primary-light-green;
+            }
+        }
+
+        .option-label {
+            display: inline-block;
+
+            &.italic {
+                font-style: italic;
+            }
+        }
+    }
+
+    .toggle-list-error {
+        color: @red-error-msg;
+    }
+
+    .toggle-list-option, .select-option {
+        cursor: pointer;
+    }
+
+    .btn-link.dropdown-label {
+        padding-left: 0;
+    }
+
+    .option-label.spinner {
+        .p-3;
+    }
+}

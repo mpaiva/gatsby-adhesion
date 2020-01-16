@@ -1,0 +1,93 @@
+// Mixins used below for button shape and shadow.
+
+.us-button-shadow() {
+  .box-shadow(0 1px 6px -1px @text-shadow-color);
+  margin: 4px 2px; // to ensure the box shadow isn't clipped
+}
+.us-button-shape(@horizontal-padding) {
+  @us-button-padding: ceil(1.66 * @horizontal-padding);
+  padding-left: @us-button-padding;
+  padding-right: @us-button-padding;
+
+  // Using a hard-coded border-radius here to distinguish buttons from input
+  // elements (yes, the confusion does happen). Can't modify global @vars
+  // since that would apply border radius to tons of other elements as well.
+  .border-radius(3px);
+}
+
+.btn {
+  .us-button-shadow();
+  .us-button-shape(@padding-base-horizontal);
+
+  &:active { outline: none; }
+  &.btn-link { .box-shadow(none); }
+  &.btn-icon { 
+    .box-shadow(none);
+    border: none;
+    background-color: transparent;
+    &[disabled] {
+        opacity:.5;
+        background-color: transparent;
+    }
+    > .fa-lg {
+      vertical-align: -5%;
+    }
+    &:active{
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: transparent;
+    }
+  }
+}
+.btn-xs { .us-button-shape(@padding-xs-horizontal); }
+.btn-sm { .us-button-shape(@padding-small-horizontal); }
+.btn-lg { .us-button-shape(@padding-large-horizontal); }
+
+// Remove margin from buttons within input-groups, as it breaks alignment
+.input-group .btn {
+  margin: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+// Place shadow around button groups instead of each button within the group
+.btn-group, .btn-group-vertical {
+  @no-padding: 0px;
+  .us-button-shadow();
+  .us-button-shape(@no-padding);
+}
+.btn-group .btn,
+.btn-group-vertical .btn,
+.btn-group > .btn-group,
+.btn-group-vertical > .btn-group {
+  margin: 0;
+ .box-shadow(none);
+}
+// Fix odd Bootstrap default that removes margin-bottom on all but first button
+// in a modal footer...
+.modal-footer .btn + .btn {
+  margin-bottom: 4px;
+}
+
+// Default to set left-side button
+.input-group-btn:first-child {
+  padding-right: 8px;
+  > .btn:last-of-type, > .btn-group .btn:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+// Override to set right-side button
+.form-control + .input-group-btn {
+  padding-right: 0px;
+  padding-left: 8px;
+  > .btn:first-of-type, > .btn-group .btn:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+
+.input-group-btn > .btn-group {
+  margin: 0;
+  > .btn { float: inherit; }
+}
